@@ -1,0 +1,12 @@
+table tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+table th {
+    padding: 0.5em;
+    background-color: darkgray;
+}
+
+table td {
+    padding: 0.5em;
+}
