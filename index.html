@@ -18,7 +18,9 @@
                 displayIndent: '2em'
             });
         </script>
-        <link rel="stylesheet" href="/static/base.css">
+        <link rel="stylesheet" href="base.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="test.js"></script>
     </head>
 
     <body>
@@ -27,35 +29,35 @@
 <h1>H1</h1>
 <form action="/save" method="post">
     <div>
-    <label for="source">Source</label>
-    <input id="source" type="text" name="source">
+    <label for="word">Word</label>
+    <input id="word" type="text" name="word">
 
-    <label for="target">Target</label>
-    <input id="target" type="text" name="target">
+    <label for="rank">Rank</label>
+    <input id="rank" type="text" name="rank">
 
-    <button>add</button>
+    <label for="index">i</label>
+    <input id="index" type="text" name="index">
+
+    <button>eval</button>
     </div>
-
-    <label for="memo">Memo</label>
-    <textarea name="memo" id="memo" cols="10" rows="10"></textarea>
 </form>
 
 <h2>H2</h2>
 <table>
     <tr>
-        <th>Source</th>
-        <th>Target</th>
-        <th>Date</th>
-        <th>Memo</th>
+        <th>$\mathrm{wt}$</th>
+        <th>$\varepsilon$</th>
+        <th>$\varphi$</th>
+        <th>$\tilde{E}$</th>
+        <th>$\tilde{F}$</th>
     </tr>
-    {% for datum in data %}
     <tr>
-        <td>{{ datum.source }}</td>
-        <td>{{ datum.target }}</td>
-        <td>{{ datum.date }}</td>
-        <td>{{ datum.memo }}</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
-    {% endfor %}
 </table>
 </main>
 
