@@ -1,12 +1,4 @@
-class User {
-  constructor(name) {
-    this.name = name;
-  }
+let para = document.body.querySelector("p");
 
-  say() {
-    console.log(this.name);
-  }
-}
 
-let user = new User("aaaa");
-user.say();
+console.log(para.textContent)
