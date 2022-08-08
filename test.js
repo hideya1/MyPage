@@ -1,3 +1,5 @@
+const ENDASH = "\u2013"
+
 let PERSONAL_DATA = {
     research_history: [    
         {
@@ -35,35 +37,35 @@ let PERSONAL_DATA = {
         {
             coauthors: ["Keita Yamamura"],
             title: "Alcove paths and Gelfand-Tsetlin patterns",
-            journal: "Annals of Combinatorics, 25 (2021), no. 3, 645--676",
+            journal: "Annals of Combinatorics, 25 (2021), no. 3, 645\u2013676",
             MRnumber: "MR4301586",
             URL: "https://link.springer.com/article/10.1007/s00026-021-00544-5",
         },
         {
             coauthors: [],
             title: "Classical weight modules over $\\imath$quantum groups",
-            journal: "Journal of Algebra, 578 (2021), 241--302",
+            journal: "Journal of Algebra, 578 (2021), 241\u2013302",
             MRnumber: "MR4234802",
             URL: "https://www.sciencedirect.com/science/article/pii/S0021869321001332?via%3Dihub",
         },
         {
             coauthors: [],
             title: "Global crystal bases for integrable modules over a quantum symmetric pair of type AIII",
-            journal: "Representation Theory 25 (2021), 27--66",
+            journal: "Representation Theory 25 (2021), 27\u201366",
             MRnumber: "MR4198491",
             URL: "https://www.ams.org/journals/ert/2021-25-02/S1088-4165-2021-00556-X/",
         },
         {
             coauthors: [],
             title: "Crystal basis theory for a quantum symmetric pair $(\\mathbf{U},\\mathbf{U}^\\jmath)$",
-            journal: "International Mathematics Research Notices. IMRN, 2020, no. 22, 8292--8352",
+            journal: "International Mathematics Research Notices. IMRN, 2020, no. 22, 8292\u20138352",
             MRnumber: "MR4216690",
             URL: "https://academic.oup.com/imrn/article/2020/22/8292/5123593?login=true",
         },
         {
             coauthors: ["Fan, Zhaobin", "Lai, Chun-Ju", "Li, Yiqiang", "Luo, Li", "Wang, Weiqiang"],
             title: "Quantum Schur duality of affine type $C$ with three parameters",
-            journal: "Mathematical Research Letters, 27 (2020), no. 1, 79--114",
+            journal: "Mathematical Research Letters, 27 (2020), no. 1, 79\u2013114",
             MRnumber: "MR4088809",
             URL: "",
         },
@@ -77,14 +79,14 @@ let PERSONAL_DATA = {
         {
             coauthors: ["Bao, Huanchen", "Wang, Weiqiang"],
             title: "Multiparameter quantum Schur duality of type $B$",
-            journal: "Proceedings of the American Mathematical Society, 146 (2018), no. 8, 3203--3216",
+            journal: "Proceedings of the American Mathematical Society, 146 (2018), no. 8, 3203\u20133216",
             MRnumber: "MR3803649",
             URL: "https://www.ams.org/journals/proc/2018-146-08/S0002-9939-2018-13749-1/",
         },
         {
             coauthors: ["Naito, Satoshi"],
             title: "A combinatorial formula expressing periodic $R$-polynomials",
-            journal: "Journal of Combinatorial Theory Series A, 148 (2017), 197--243",
+            journal: "Journal of Combinatorial Theory Series A, 148 (2017), 197\u2013243",
             MRnumber: "MR3603320",
             URL: "https://www.sciencedirect.com/science/article/pii/S0097316516301406?via%3Dihub",
         },
@@ -238,7 +240,7 @@ let PERSONAL_DATA = {
 let research_history = document.body.querySelector("#research_history dl");
 for (const i of PERSONAL_DATA.research_history) {
     let dt = document.createElement("dt");
-    dt.textContent = i.from + "&ndash;" + i.to;
+    dt.textContent = i.from + ENDASH + i.to;
     let dd = document.createElement("dd");
     dd.textContent = i.at + "(" + i.as + ")";
     research_history.append(dt, dd);
@@ -284,7 +286,7 @@ for (const i of PERSONAL_DATA.talks) {
 let funds = document.body.querySelector("#funds dl");
 for (const i of PERSONAL_DATA.funds) {
     let dt = document.createElement("dt");
-    dt.textContent = i.from + "&ndash;" + i.to;
+    dt.textContent = i.from + ENDASH + i.to;
     let dd = document.createElement("dd");
     dd.textContent = i.name + ", " + i.category + ", Grant Number:" + i.number;
     funds.append(dt, dd);
