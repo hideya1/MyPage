@@ -1,3 +1,38 @@
+body {
+    background-color: antiquewhite;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 2em;
+}
+
+main * {
+    margin: 0%;
+    padding: 0%;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+}
+
+.article h2 {
+    border-left-style: solid;
+    border-left-color: aqua;
+    border-left-width: 0.2em;
+}
+
+.article p,ol,ul,dl {
+    margin-left: 2em;
+}
+
+#keywords {
+    margin-left: 1em;
+}
+
+
+
+
 img.logo {
     max-width: 50pt;
 }
