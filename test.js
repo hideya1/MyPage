@@ -31,28 +31,6 @@ let PERSONAL_DATA = {
             as: "project researcher"
         },
     ],
-    education: [
-        {
-            from: "2016-04",
-            to: "2019-03",
-            at: "School of Science, Tokyo Institute of Technology",
-        },
-        {
-            from: "2014-04",
-            to: "2016-03",
-            at: "Mathematics, Science of Engineering, Tokyo Institute of Technology",
-        },
-        {
-            from: "2012-04",
-            to: "2014-03",
-            at: "Department of Mathematics, Faculty of Science, The University of Tokyo",
-        },
-        {
-            from: "2010-04",
-            to: "2012-03",
-            at: "College of Arts and Sciences, The University of Tokyo",
-        },
-    ],
     papers: [
         {
             coauthors: ["Keita Yamamura"],
@@ -228,6 +206,32 @@ let PERSONAL_DATA = {
             at: "Conference on Algebraic Representation Theory 2017",
             fav: false,
         },
+    ],
+    funds: [
+        {
+            from: "2021-04",
+            to: "2024-03",
+            number: "21J00013",
+            name: "Combinatorial structures appearing in representation theory of quantum symmetric subalgebras, and their applications",
+            category: "Grant-in-Aid for JSPS Fellows",
+            URL: "https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-21J00013/"
+        },
+        {
+            from: "2020-04",
+            to: "2024-03",
+            number: "20K14286",
+            name: "Weight modules and crystal bases for quantum symmetric pairs",
+            category: "Grant-in-Aid for Early-Career Scientists",
+            URL: "https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-20K14286/"
+        },
+        {
+            from: "2017-04",
+            to: "2019-03",
+            number: "17J00172",
+            name: "An approach to the Kazhdan-Lusztig polynomials via the representation theory of quantum symmetric pairs",
+            category: "Grant-in-Aid for JSPS Fellows",
+            URL: "https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-17J00172/"
+        }
     ]
 };
 
@@ -238,15 +242,6 @@ for (const i of PERSONAL_DATA.research_history) {
     let dd = document.createElement("dd");
     dd.textContent = i.at + "(" + i.as + ")";
     research_history.append(dt, dd);
-};
-
-let edu = document.body.querySelector("#education dl");
-for (const i of PERSONAL_DATA.education) {
-    let dt = document.createElement("dt");
-    dt.textContent = i.from + "&ndash;" + i.to;
-    let dd = document.createElement("dd");
-    dd.textContent = i.at;
-    edu.append(dt, dd);
 };
 
 let papers = document.body.querySelector("#papers ol");
@@ -284,6 +279,15 @@ for (const i of PERSONAL_DATA.talks) {
     let li = document.createElement("li");
     li.textContent = i.title + ", " + i.at + ", " + i.date;
     talks.append(li);
+};
+
+let funds = document.body.querySelector("#funds dl");
+for (const i of PERSONAL_DATA.funds) {
+    let dt = document.createElement("dt");
+    dt.textContent = i.from + "&ndash;" + i.to;
+    let dd = document.createElement("dd");
+    dd.textContent = i.name + ", " + i.category + ", Grant Number:" + i.number;
+    funds.append(dt, dd);
 };
 
 
