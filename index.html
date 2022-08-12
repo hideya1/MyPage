@@ -1,85 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>test</title>
-    <meta charset='UTF-8'>
-    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    <script type='text/x-mathjax-config'>
-        MathJax.Hub.Config({
-            TeX: { equationNumbers: { autoNumber: 'AMS' }},
-            tex2jax: {
-                inlineMath: [ ['$','$'] ],
-                processEscapes: true
-            },
-            'HTML-CSS': { matchFontHeight: false },
-            displayAlign: 'left',
-            displayIndent: '2em'
-        });
-    </script>
-    <link rel="stylesheet" href="base.css">
+<title>Hideya Watanabe</title>
+<meta charset='UTF-8'>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: 'AMS' }},
+        tex2jax: {
+            inlineMath: [ ['$','$'] ],
+    processEscapes: true
+        },
+        'HTML-CSS': { matchFontHeight: false },
+        displayAlign: 'left',
+        displayIndent: '2em'
+    });
+</script>
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="mypage.css">
+<script src="mypage.js" defer></script>
 </head>
 
 <body>
 <header>
-    <img class="logo" src="logo.jpg" alt="">
+<div class="b_glMenu">
+<a class="logo" href=""><img src="logo.jpg"></a>
+<nav class="b_tabNav">
+    <ul class="b_ul">
+        <li class="is_active"><a href="">Home</a></li>
+        <li><a href="papers.html">Papers</a></li>
+        <li><a href="talks.html">Invited Talks</a></li>
+    </ul>
+</nav>
+</div>
 </header>
 
 <main>
-<article class="article">
-    <div id="research-interests">
-        <h2>Research Interests</h2>
-        <p>
+<article class="b_art">
+    <h1 class="b_art_ttl">Hideya Watanabe's Homepage</h1>
+    <section class="b_sect" id="interests">
+        <h2 class="b_sect_ttl">Research Interests</h2>
+        <p class="b_para">
             Representation theory of Lie algebras and related objects, and their interrelations.
         </p>
-        <div id="keywords">
-        <h3>Keywords</h3>
-        <p>
-            representation theory, combinatorics, quantum group, quantum symmetric pair, crystal, $\imath$crystal, Iwahori-Hecke algebra, quantum Brauer algebra, Schur duality.
+        <section class="b_subsect" id="keywords">
+        <h3 class="b_subsect_ttl">Keywords</h3>
+        <p class="b_para">
         </p>
-        </div>
-    </div>
-    
-    <div id="research_history">
-        <h2 class="section">Research History</h2>
-        <dl>
-        </dl>
-    </div>
-    
-    <div id="education">
-        <h2 class="section">Education</h2>
-        <ul>
-            <li>Ph.D. in Science, Tokyo Institute of Technology (2019), Advisor: Satoshi Naito.</li>
-            <li>M.S. in Science, Tokyo Institute of Technology (2016), Advisor: Satoshi Naito.</li>
-            <li>B.S. in Science, The University of Tokyo (2014).</li>
+        </section>
+    </section>
+
+    <section class="b_sect" id="education">
+        <h2 class="b_sect_ttl">Education</h2>
+        <ul class="b_para b_ul persDataList">
         </ul>
-    </div>
-    
-    <div id="papers">
-        <h2 class="section">Papers</h2>
-        <ol>
-        </ol>
-    </div>
-    
-    <div id="preprints">
-        <h2 class="section">Preprints</h2>
-        <ol>
-        </ol>
-    </div>
-    
-    <div id="talks">
-        <h2 class="section">Invited Talks</h2>
-        <ol>
-        </ol>
-    </div>
-    
-    <div id="funds">
-        <h2 class="section">Research Funds</h2>
-        <dl>
-        </dl>
-    </div>
+    </section>
+
+    <section class="b_sect" id="history">
+        <h2 class="b_sect_ttl l_ttl">Research History</h2>
+        <ul class="b_para b_ul persDataList">
+        </ul>
+    </section>
+
+    <section class="b_sect" id="funds">
+        <h2 class="b_sect_ttl l_ttl">Funds</h2>
+        <ul class="b_para b_ul persDataList">
+        </ul>
+    </section>
+
 </article>
 </main>
-</body>
 
-<script src="test.js"></script>
+<footer>
+<address>
+    contact: (my full name (family name first))@gmail.com
+</address>
+</footer>
+</body>
 </html>
