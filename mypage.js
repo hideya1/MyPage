@@ -90,7 +90,7 @@ let Papers = [
     {
         coauthors: [],
         title: "Crystal basis theory for a quantum symmetric pair $(\\mathbf{U},\\mathbf{U}^\\jmath)$",
-        journal: "International Mathematics Research Notices. IMRN, 2020, no. 22, 8292\u20138352",
+        journal: "International Mathematics Research Notices. IMRN, (2020), no. 22, 8292\u20138352",
         MRnumber: "MR4216690",
         URL: "https://academic.oup.com/imrn/article/2020/22/8292/5123593?login=true",
     },
@@ -301,18 +301,29 @@ for (const obj of Education) {
     edu_ul.append(li);
 };
 
-
 let his_ul = document.body.querySelector("#his ul");
 for (const obj of ResearchHistory) {
     let li = document.createElement("li");
-    li.textContent = obj.from + ENDASH + obj.to + ": " + obj.at + ", " + obj.as + ".";
+    let div = document.createElement("div");
+    let div1 = document.createElement("div");
+    let div2 = document.createElement("div");
+    div1.textContent = `${obj.from}${ENDASH}${obj.to}:`;
+    div2.textContent = `${obj.at}, ${obj.as}.`;
+    div.append(div1, div2);
+    li.append(div);
     his_ul.append(li);
 };
 
 let funds_ul = document.querySelector("#funds ul");
 for (const obj of Funds) {
     let li = document.createElement("li");
-    li.textContent = obj.from + ENDASH + obj.to + ": " + obj.name + ", " + obj.category + ", Grant Number: " + obj.number + ".";
+    let div = document.createElement("div");
+    let div1 = document.createElement("div");
+    let div2 = document.createElement("div");
+    div1.textContent = `${obj.from}${ENDASH}${obj.to}:`;
+    div2.textContent =  `${obj.name}, ${obj.category}, Grant Number: ${obj.number}.`;
+    div.append(div1, div2);
+    li.append(div);
     funds_ul.append(li);
 };
 
@@ -357,7 +368,6 @@ for (const obj of Papers) {
 };
 
 let pre_ol = document.querySelector("#preprints ol");
-console.log(pre_ol);
 for (const obj of Preprints) {
     let li = document.createElement("li");
     let result = "";

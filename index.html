@@ -22,7 +22,10 @@
 
 <body>
 <header>
-<h1 class="b_art_ttl">Hideya Watanabe's Homepage</h1>
+    <div class="header">
+        <img src="logo.jpg">
+        <h1 class="b_art_ttl b_page_ttl">Hideya Watanabe's Homepage</h1>
+    </div>
 </header>
 
 <main>
@@ -33,6 +36,7 @@
             <li class="is_active" name="home">Home</li>
             <li name="papers">Papers</li>
             <li name="talks">Talks</li>
+            <li name="funds">Funds</li>
         </ul>
     </div>
     <!--b_tabPages_nav-->
@@ -63,15 +67,7 @@
             <section id="his" class="b_art_sect">
                 <h3 class="b_art_sect_ttl">Research History</h3>
                 <p>
-                    <ul class="persDataList">
-                    </ul>
-                </p>
-            </section>
-
-            <section id="funds" class="b_art_sect">
-                <h3 class="b_art_sect_ttl">Funds</h3>
-                <p>
-                    <ul class="persDataList">
+                    <ul class="persDataList flex_li">
                     </ul>
                 </p>
             </section>
@@ -104,6 +100,17 @@
                 <h3 class="b_art_sect_ttl">Others</h3>
                 <ol>
                 </ol>
+            </section>
+        </article>
+    
+        <article class="b_art" name="funds" hidden>
+            <h2 class="b_art_ttl">Funds</h2>
+            <section id="funds" class="b_art_sect">
+                <h3 class="b_art_sect_ttl">Funds</h3>
+                <p>
+                    <ul class="persDataList flex_li">
+                    </ul>
+                </p>
             </section>
         </article>
     </div>
