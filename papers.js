@@ -92,7 +92,7 @@ let format_name = function(name) {
     return result[1] + " " + result[0];
 };
 
-let papers_ol = document.querySelector("#papers ol");
+let papers_ol = document.querySelector("#papers");
 for (const obj of Papers) {
     let li = document.createElement("li");
     result = ""

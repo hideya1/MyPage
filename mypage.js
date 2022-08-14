@@ -1,3 +1,4 @@
+"use strict";
 const ENDASH = "\u2013";
 
 let Keywords = [
@@ -66,7 +67,7 @@ let ResearchHistory = [
 
 let Papers = [
     {
-        coauthors: ["Keita Yamamura"],
+        coauthors: ["Yamamura, Keita"],
         title: "Alcove paths and Gelfand-Tsetlin patterns",
         journal: "Annals of Combinatorics, 25 (2021), no. 3, 645\u2013676",
         MRnumber: "MR4301586",
@@ -271,10 +272,29 @@ let Funds = [
 ];
 
 
+//tabPages
+let tabs = document.querySelectorAll(".b_tabPages li");
+
+for (const tab of tabs) {
+    tab.onclick = function() {
+        for (let i = 0, l = tabs.length; i < l; i++) {
+            if (tabs[i].classList.contains("is_active")) {
+                tabs[i].classList.remove("is_active");
+                document.querySelector(`.b_tabPages .b_tabPages_pages article[name='${tabs[i].getAttribute("name")}']`).setAttribute("hidden", true);
+                break;
+            };
+        };
+        tab.classList.add("is_active");
+        document.querySelector(`.b_tabPages .b_tabPages_pages article[name='${tab.getAttribute("name")}']`).removeAttribute("hidden");
+    };
+};
+//tabPages
+
+
 let keywords_p = document.querySelector("#keywords p");
 keywords_p.textContent = Keywords.join(", ") + ".";
 
-let edu_ul = document.querySelector("#education ul");
+let edu_ul = document.querySelector("#edu ul");
 for (const obj of Education) {
     let li = document.createElement("li");
     li.textContent = obj.type + ", " + obj.univ + ", " + obj.date + ", Advisor: " + obj.advisor + ".";
@@ -282,7 +302,7 @@ for (const obj of Education) {
 };
 
 
-let his_ul = document.body.querySelector("#history ul");
+let his_ul = document.body.querySelector("#his ul");
 for (const obj of ResearchHistory) {
     let li = document.createElement("li");
     li.textContent = obj.from + ENDASH + obj.to + ": " + obj.at + ", " + obj.as + ".";
@@ -296,9 +316,83 @@ for (const obj of Funds) {
     funds_ul.append(li);
 };
 
-let talks_ol = document.body.querySelector("#talks ol");
-for (const i of Talks) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+let format_name = function(name) {
+    let result = name.split(", ");
+    return result[1] + " " + result[0];
+};
+
+let papers_ol = document.querySelector("#papers ol");
+for (const obj of Papers) {
     let li = document.createElement("li");
-    li.textContent = i.title + ", " + i.at + ", " + i.date;
-    talks_ol.append(li);
+    let result = "";
+    if (obj.coauthors.length > 0) {
+        result += "(joint work with "
+        for (let i = 0; i < obj.coauthors.length; i++) {
+            result += format_name(obj.coauthors[i]);
+            if (i < obj.coauthors.length-2) {
+                result += ", ";
+            } else if (i == obj.coauthors.length-2) {
+                result += ", and ";
+            } else {
+                result += ") ";
+            };
+        };
+    };
+    result += obj.title + ", " + obj.journal + ".";
+    li.textContent = result;
+    papers_ol.append(li);
+};
+
+let pre_ol = document.querySelector("#preprints ol");
+console.log(pre_ol);
+for (const obj of Preprints) {
+    let li = document.createElement("li");
+    let result = "";
+    if (obj.coauthors.length > 0) {
+        result += "(joint work with "
+        for (let i = 0; i < obj.coauthors.length; i++) {
+            result += format_name(obj.coauthors[i]);
+            if (i < obj.coauthors.length-2) {
+                result += ", ";
+            } else if (i == obj.coauthors.length-2) {
+                result += ", and ";
+            } else {
+                result += ") ";
+            };
+        };
+    };
+    result += obj.title + ", " + obj.at + ".";
+    li.textContent = result;
+    pre_ol.append(li);
+};
+
+
+
+
+
+
+
+let select_ol = document.body.querySelector("#selected_talks ol");
+let others_ol = document.body.querySelector("#other_talks ol");
+for (const obj of Talks) {
+    let li = document.createElement("li");
+    li.textContent = obj.title + ", " + obj.at + ", " + obj.date + ".";
+    if (obj.fav === true) {
+        select_ol.append(li);
+    } else {
+    others_ol.append(li);
+    };
 };
