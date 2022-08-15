@@ -296,34 +296,40 @@ keywords_p.textContent = Keywords.join(", ") + ".";
 
 let edu_ul = document.querySelector("#edu ul");
 for (const obj of Education) {
-    let li = document.createElement("li");
-    li.textContent = obj.type + ", " + obj.univ + ", " + obj.date + ", Advisor: " + obj.advisor + ".";
+    const li = document.createElement("li");
+    const div1 = document.createElement("div");
+    const div2 = document.createElement("div");
+    div1.className = "b_2col_list_1st";
+    div2.className = "b_2col_list_2nd";
+    div1.textContent = `${obj.type}:`;
+    div2.textContent = `${obj.univ}, ${obj.date}, Advisor: ${obj.advisor}`;
+    li.append(div1, div2);
     edu_ul.append(li);
 };
 
 let his_ul = document.body.querySelector("#his ul");
 for (const obj of ResearchHistory) {
     let li = document.createElement("li");
-    let div = document.createElement("div");
-    let div1 = document.createElement("div");
-    let div2 = document.createElement("div");
+    const div1 = document.createElement("div");
+    const div2 = document.createElement("div");
+    div1.className = "b_2col_list_1st";
+    div2.className = "b_2col_list_2nd";
     div1.textContent = `${obj.from}${ENDASH}${obj.to}:`;
     div2.textContent = `${obj.at}, ${obj.as}.`;
-    div.append(div1, div2);
-    li.append(div);
+    li.append(div1, div2);
     his_ul.append(li);
 };
 
 let funds_ul = document.querySelector("#funds ul");
 for (const obj of Funds) {
     let li = document.createElement("li");
-    let div = document.createElement("div");
-    let div1 = document.createElement("div");
-    let div2 = document.createElement("div");
+    const div1 = document.createElement("div");
+    const div2 = document.createElement("div");
+    div1.className = "b_2col_list_1st";
+    div2.className = "b_2col_list_2nd";
     div1.textContent = `${obj.from}${ENDASH}${obj.to}:`;
     div2.textContent =  `${obj.name}, ${obj.category}, Grant Number: ${obj.number}.`;
-    div.append(div1, div2);
-    li.append(div);
+    li.append(div1, div2);
     funds_ul.append(li);
 };
 
@@ -340,52 +346,74 @@ for (const obj of Funds) {
 
 
 
-let format_name = function(name) {
+function format_name(name) {
     let result = name.split(", ");
     return result[1] + " " + result[0];
 };
 
-let papers_ol = document.querySelector("#papers ol");
-for (const obj of Papers) {
-    let li = document.createElement("li");
+function format_paper(paper) {
     let result = "";
-    if (obj.coauthors.length > 0) {
+    if (paper.coauthors.length > 0) {
         result += "(joint work with "
-        for (let i = 0; i < obj.coauthors.length; i++) {
-            result += format_name(obj.coauthors[i]);
-            if (i < obj.coauthors.length-2) {
+        for (let i = 0; i < paper.coauthors.length; i++) {
+            result += format_name(paper.coauthors[i]);
+            if (i < paper.coauthors.length-2) {
                 result += ", ";
-            } else if (i == obj.coauthors.length-2) {
+            } else if (i == paper.coauthors.length-2) {
                 result += ", and ";
             } else {
                 result += ") ";
             };
         };
     };
-    result += obj.title + ", " + obj.journal + ".";
-    li.textContent = result;
-    papers_ol.append(li);
+    result += `${paper.title}, ${paper.journal}.`;
+    return result;
 };
 
-let pre_ol = document.querySelector("#preprints ol");
-for (const obj of Preprints) {
-    let li = document.createElement("li");
+function format_preprint(preprint) {
     let result = "";
-    if (obj.coauthors.length > 0) {
+    if (preprint.coauthors.length > 0) {
         result += "(joint work with "
-        for (let i = 0; i < obj.coauthors.length; i++) {
-            result += format_name(obj.coauthors[i]);
-            if (i < obj.coauthors.length-2) {
+        for (let i = 0; i < preprint.coauthors.length; i++) {
+            result += format_name(preprint.coauthors[i]);
+            if (i < preprint.coauthors.length-2) {
                 result += ", ";
-            } else if (i == obj.coauthors.length-2) {
+            } else if (i == preprint.coauthors.length-2) {
                 result += ", and ";
             } else {
                 result += ") ";
             };
         };
     };
-    result += obj.title + ", " + obj.at + ".";
-    li.textContent = result;
+    result += `${preprint.title}, ${preprint.at}.`;
+    return result;
+};
+
+let papers_ol = document.querySelector("#papers ol");
+for (let i = 0, l = Papers.length; i < l; i++) {
+    const paper = Papers[i];
+    const li = document.createElement("li");
+    const div1 = document.createElement("div");
+    const div2 = document.createElement("div");
+    div1.className = "b_2col_list_1st";
+    div2.className = "b_2col_list_2nd";
+    div1.textContent = `${i+1}.`
+    div2.textContent = format_paper(paper);
+    li.append(div1, div2);
+    papers_ol.append(li);
+}
+
+let pre_ol = document.querySelector("#preprints ol");
+for (let i = 0, l = Preprints.length; i < l; i++) {
+    const preprint = Preprints[i];
+    const li = document.createElement("li");
+    const div1 = document.createElement("div");
+    const div2 = document.createElement("div");
+    div1.className = "b_2col_list_1st";
+    div2.className = "b_2col_list_2nd";
+    div1.textContent = `${i+1}.`
+    div2.textContent = format_preprint(preprint);
+    li.append(div1, div2);
     pre_ol.append(li);
 };
 
@@ -397,12 +425,29 @@ for (const obj of Preprints) {
 
 let select_ol = document.body.querySelector("#selected_talks ol");
 let others_ol = document.body.querySelector("#other_talks ol");
-for (const obj of Talks) {
-    let li = document.createElement("li");
-    li.textContent = obj.title + ", " + obj.at + ", " + obj.date + ".";
-    if (obj.fav === true) {
+for (let i = 0, j = 0, l = Talks.length; i < l; i++) {
+    const talk = Talks[i];
+    const li = document.createElement("li");
+    const div1 = document.createElement("div");
+    const div2 = document.createElement("div");
+    div1.className = "b_2col_list_1st";
+    div2.className = "b_2col_list_2nd";
+    div2.textContent = `${talk.title}, ${talk.at}, ${talk.date}.`;
+    li.append(div1, div2);
+    if (talk.fav === true) {
+        div1.textContent = `${j+1}.`;
+        j++;
         select_ol.append(li);
     } else {
-    others_ol.append(li);
+        div1.textContent = `${i+1}.`;
+        others_ol.append(li);
     };
 };
+
+
+
+
+
+
+
+

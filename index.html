@@ -21,12 +21,13 @@
 </head>
 
 <body>
-<header>
-    <div class="header">
-        <img src="logo.jpg">
-        <h1 class="b_art_ttl b_page_ttl">Hideya Watanabe's Homepage</h1>
-    </div>
-</header>
+    <header class="l_header">
+        <div class="l_header_inner l_header_inner__flex">
+            <img src="logo.jpg">
+            <h1>Hideya Watanabe's Homepage</h1>
+        </div>
+        <!--l_header_inner-->
+    </header>
 
 <main>
 <article class="b_art">
@@ -59,7 +60,7 @@
             <section id="edu" class="b_art_sect">
                 <h3 class="b_art_sect_ttl">Education</h3>
                 <p>
-                    <ul class="persDataList">
+                    <ul class="b_2col_list">
                     </ul>
                 </p>
             </section>
@@ -67,7 +68,7 @@
             <section id="his" class="b_art_sect">
                 <h3 class="b_art_sect_ttl">Research History</h3>
                 <p>
-                    <ul class="persDataList flex_li">
+                    <ul class="b_2col_list">
                     </ul>
                 </p>
             </section>
@@ -77,13 +78,13 @@
             <h2 class="b_art_ttl">Papers</h2>
             <section id="papers" class="b_art_sect">
                 <h3 class="b_art_sect_ttl">Published</h3>
-                <ol>
+                <ol class="b_2col_list">
                 </ol>
             </section>
 
             <section id="preprints" class="b_art_sect">
                 <h3 class="b_art_sect_ttl">Preprints</h3>
-                <ol>
+                <ol class="b_2col_list">
                 </ol>
             </section>
         </article>
@@ -92,13 +93,13 @@
             <h2 class="b_art_ttl">Invited Talks</h2>
             <section id="selected_talks" class="b_art_sect">
                 <h3 class="b_art_sect_ttl">Selected</h3>
-                <ol>
+                <ol class="b_2col_list b_2col_list__99">
                 </ol>
             </section>
             
             <section id="other_talks" class="b_art_sect">
                 <h3 class="b_art_sect_ttl">Others</h3>
-                <ol>
+                <ol class="b_2col_list b_2col_list__99">
                 </ol>
             </section>
         </article>
@@ -108,7 +109,7 @@
             <section id="funds" class="b_art_sect">
                 <h3 class="b_art_sect_ttl">Funds</h3>
                 <p>
-                    <ul class="persDataList flex_li">
+                    <ul class="b_2col_list">
                     </ul>
                 </p>
             </section>
@@ -120,10 +121,12 @@
 </article>
 </main>
 
-<footer>
-<address>
-    contact: (my full name (family name first))[at]gmail.com
-</address>
+<footer class="l_footer">
+    <div class="l_footer_inner">
+        <address>
+            contact: (my full name (family name first))[at]gmail.com
+        </address>
+    </div>
 </footer>
 </body>
 </html>
