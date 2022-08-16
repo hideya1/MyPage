@@ -63,6 +63,12 @@ let ResearchHistory = [
         at: "Graduate School of Information Science and Technology, Osaka University",
         as: "project researcher"
     },
+    {
+        from: "2017-04",
+        to: "2019-03",
+        at: "Department of Mathematics, Tokyo Institute of Technology",
+        as: "JSPS research fellow DC2"
+    },
 ];
 
 let Papers = [
