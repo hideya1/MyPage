@@ -152,10 +152,10 @@ a {
     margin-right: 1ex;
 }
 #edu .b_2col_list_1st {
-    flex-basis: 8.3em;
+    flex-basis: 6em;
 }
 #his .b_2col_list_1st,
-#FUNDS .b_2col_list_1st {
+#研究資金 .b_2col_list_1st {
     flex-basis: 9.5em;
 }
 .b_2col_list_2nd {

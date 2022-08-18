@@ -3,14 +3,14 @@ let url = new URL(location.href);
 let params = url.searchParams;
 let menu = params.get("menu");
 if (menu === null) {
-    menu = "HOME";
+    menu = "ホーム";
 }
 //menu を作成
 const MENU = [
-    "HOME",
-    "PAPERS",
-    "TALKS",
-    "FUNDS",
+    "ホーム",
+    "論文",
+    "招待講演",
+    "研究資金",
 ];
 const menuNav = document.getElementById("menuNav");
 const ul = document.createElement("ul");
@@ -18,11 +18,11 @@ for (const m of MENU) {
     const li = document.createElement("li");
     const a = document.createElement("a");
     a.textContent = m;
-    if (m === "HOME") {
-        a.href = "/index.html";
+    if (m === "ホーム") {
+        a.href = "/index_ja.html";
     }
     else {
-        a.href = `/index.html?menu=${m}`;
+        a.href = `/index_ja.html?menu=${m}`;
     };
     if (menu === m) {
         a.setAttribute("class", "is_active");
@@ -36,39 +36,39 @@ menuNav.append(ul);
 const ENDASH = "\u2013";
 
 let Keywords = [
-    "representation theory",
-    "combinatorics",
-    "integrable system",
-    "quantum group",
-    "quantum symmetric pair",
-    "Hecke algebra",
-    "crystal",
-    "$\\imath$crystal",
-    "$R$-matrix",
-    "$K$-matrix"
+    "表現論",
+    "組合せ論",
+    "可積分系",
+    "量子群",
+    "量子対称対",
+    "Hecke 代数",
+    "結晶",
+    "$\\imath$結晶",
+    "$R$-行列",
+    "$K$-行列",
 ];
 
 let Education = [
     {
-        type: "Ph.D. in Science",
+        type: "博士(理学)",
         date: "2019-03",
-        univ: "Tokyo Institute of Technology",
-        url: "https://www.titech.ac.jp/english",
-        advisor: "Satoshi Naito",
+        univ: "東京工業大学",
+        url: "https://www.titech.ac.jp/",
+        advisor: "内藤聡",
     },
     {
-        type: "M.S. in Science",
+        type: "修士(理学)",
         date: "2016-03",
-        univ: "Tokyo Institute of Technology",
-        url: "https://www.titech.ac.jp/english",
-        advisor: "Satoshi Naito",
+        univ: "東京工業大学",
+        url: "https://www.titech.ac.jp/",
+        advisor: "内藤聡",
     },
     {
-        type: "B.S. in Science",
+        type: "学士(理学)",
         date: "2014-03",
-        univ: "The University of Tokyo",
-        url: "https://www.u-tokyo.ac.jp/en/index.html",
-        advisor: "Yoshihisa Saito",
+        univ: "東京大学",
+        url: "https://www.u-tokyo.ac.jp/ja/index.html",
+        advisor: "斉藤義久",
     },
 ];
 
@@ -77,14 +77,14 @@ let ResearchHistory = [
         from: "2022-04",
         to: "Present",
         at: "Osaka Central Advanced Mathematical Institute, Osaka Metropolitan University",
-        url: "http://www.sci.osaka-cu.ac.jp/OCAMI/index_e.html",
+        url: "http://www.sci.osaka-cu.ac.jp/OCAMI/",
         as: "JSPS research fellow PD"
     },   
     {
         from: "2021-04",
         to: "2022-03",
         at: "Osaka City University Advanced Mathematical Institute, Osaka City University",
-        url: "http://www.sci.osaka-cu.ac.jp/OCAMI/index_e.html",
+        url: "http://www.sci.osaka-cu.ac.jp/OCAMI/",
         as: "JSPS research fellow PD"
     },   
     {
@@ -326,7 +326,7 @@ let Funds = [
 
 
 //HOME
-if (menu === "HOME") {
+if (menu === "ホーム") {
     const keywords_p = document.getElementById("keywords_p");
     keywords_p.textContent = Keywords.join(", ") + ".";
     
@@ -339,7 +339,7 @@ if (menu === "HOME") {
         div1.className = "b_2col_list_1st";
         div2.className = "b_2col_list_2nd";
         div1.textContent = `${obj.type}:`;
-        div2.innerHTML = `<a href="${obj.url}">${obj.univ}</a>, ${obj.date}, Advisor: ${obj.advisor}`;
+        div2.innerHTML = `<a href="${obj.url}">${obj.univ}</a>, ${obj.date}, 指導教員: ${obj.advisor}`;
         li.append(div1, div2);
         edu_ul.append(li);
     };
@@ -360,7 +360,7 @@ if (menu === "HOME") {
 
     let art = document.getElementById(menu);
     art.removeAttribute("hidden");
-} else if (menu === "PAPERS") {
+} else if (menu === "論文") {
     //PAPERS
     function format_name(name) {
         let result = name.split(", ");
@@ -436,7 +436,7 @@ if (menu === "HOME") {
 
     let art = document.getElementById(menu);
     art.removeAttribute("hidden");
-} else if (menu === "TALKS") {
+} else if (menu === "招待講演") {
     //TALKS        
     let select_ol = document.getElementById("selected_talks_ol");
     let others_ol = document.getElementById("other_talks_ol");
@@ -462,7 +462,7 @@ if (menu === "HOME") {
 
     let art = document.getElementById(menu);
     art.removeAttribute("hidden");
-} else if (menu === "FUNDS") {
+} else if (menu === "研究資金") {
     //FUNDS
     let funds_ul = document.getElementById("funds_ul");
     for (const obj of Funds) {
