@@ -409,13 +409,9 @@ if (menu === "HOME") {
     for (let i = 0, l = Papers.length; i < l; i++) {
         const paper = Papers[i];
         const li = document.createElement("li");
-        const div1 = document.createElement("div");
-        const div2 = document.createElement("div");
-        div1.className = "b_2col_list_1st";
-        div2.className = "b_2col_list_2nd";
-        div1.textContent = `${i+1}.`
-        div2.innerHTML = format_paper(paper);
-        li.append(div1, div2);
+        const span = document.createElement("span");
+        span.innerHTML = format_paper(paper);
+        li.append(span);
         papers_ol.append(li);
     }
     
@@ -423,13 +419,9 @@ if (menu === "HOME") {
     for (let i = 0, l = Preprints.length; i < l; i++) {
         const preprint = Preprints[i];
         const li = document.createElement("li");
-        const div1 = document.createElement("div");
-        const div2 = document.createElement("div");
-        div1.className = "b_2col_list_1st";
-        div2.className = "b_2col_list_2nd";
-        div1.textContent = `${i+1}.`
-        div2.innerHTML = format_preprint(preprint);
-        li.append(div1, div2);
+        const span = document.createElement("span");
+        span.innerHTML = format_preprint(preprint);
+        li.append(span);
         pre_ol.append(li);
     };
     

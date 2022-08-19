@@ -16,82 +16,86 @@
         displayIndent: '2em'
     });
 </script>
-<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="/base.css">
+<link rel="stylesheet" href="/layout.css">
+<link rel="stylesheet" href="/mypage.css">
 <script src="mypage.js" defer></script>
 </head>
 
 <body>
-    <header class="l_header">
-        <div class="l_header_inner l_header_inner__flex">
-            <a href=""><img src="logo.jpg"></a>
-            <h1>Hideya Watanabe's Homepage</h1>
+    <header>
+        <div class="l_header">
+            <div class="l_header_inner b_logoTtl">
+                <a href=""><img class="b_logoTtl_logo" src="logo.jpg"></a>
+                <h1 class="l_head_ttl b_logoTtl_ttl">Hideya Watanabe's Homepage</h1>
+            </div>
+            <!--l_header_inner-->
         </div>
-        <!--l_header_inner-->
         <nav id="menuNav" class="b_menu">
         </nav>
     </header>
 
 <main>
-<article class="b_art">
-    <article id="HOME" class="b_art" hidden>
-        <h2 class="b_art_ttl">Home</h2>
-        <section class="b_art_sect">
-            <h3 class="b_art_sect_ttl">Research Interests</h3>
+<article class="l_art">
+    <article id="HOME" class="l_art" hidden>
+        <h2 class="l_art_ttl">Home</h2>
+        <section class="l_sect">
+            <h3 class="l_sect_ttl">Research Interests</h3>
             <p>
                 Representation theory of Lie algebras and related objects, and their interrelations.
             </p>
-            <section id="keywords" class="b_art_subsect">
-                <h4 class="b_art_subsect_ttl">Keywords</h4>
+            <section id="keywords" class="l_subSect">
+                <h4 class="l_subSect_ttl">Keywords</h4>
                 <p id="keywords_p">
                 </p>
             </section>
         </section>
 
-        <section id="edu" class="b_art_sect">
-            <h3 class="b_art_sect_ttl">Education</h3>
-            <ul id="edu_ul" class="b_2col_list">
+        <section id="edu" class="l_sect">
+            <h3 class="l_sect_ttl">Education</h3>
+            <ul id="edu_ul" class="l_para b_2col_list">
             </ul>
         </section>
 
-        <section id="his" class="b_art_sect">
-            <h3 class="b_art_sect_ttl">Research History</h3>
-            <ul id="his_ul" class="b_2col_list">
+        <section id="his" class="l_sect">
+            <h3 class="l_sect_ttl">Research History</h3>
+            <ul id="his_ul" class="l_para b_2col_list">
             </ul>
         </section>
     </article>
 
-    <article id="PAPERS" class="b_art" hidden>
-        <h2 class="b_art_ttl">Papers</h2>
-        <section id="papers" class="b_art_sect">
-            <h3 class="b_art_sect_ttl">Published</h3>
-            <ol id="papers_ol" class="b_2col_list">
+    <article id="PAPERS" class="l_art" hidden>
+        <h2 class="l_art_ttl">Papers</h2>
+        <section id="papers" class="l_sect">
+            <h3 class="l_sect_ttl">Published</h3>
+            <ol id="papers_ol" class="l_para">
             </ol>
         </section>
 
-        <section id="preprints" class="b_art_sect">
-            <h3 class="b_art_sect_ttl">Preprints</h3>
-            <ol id="preprints_ol" class="b_2col_list">
+        <section id="preprints" class="l_sect">
+            <h3 class="l_sect_ttl">Preprints</h3>
+            <ol id="preprints_ol" class="l_para">
             </ol>
         </section>
     </article>
     
-    <article id="TALKS" class="b_art" hidden>
-        <h2 class="b_art_ttl">Invited Talks</h2>
-        <section id="selected_talks" class="b_art_sect">
-            <h3 class="b_art_sect_ttl">Selected</h3>
+    <article id="TALKS" class="l_art" hidden>
+        <h2 class="l_art_ttl">Invited Talks</h2>
+        <section id="selected_talks" class="l_sect">
+            <h3 class="l_sect_ttl">Selected</h3>
             <ol id="selected_talks_ol" class="b_2col_list b_2col_list__99">
             </ol>
         </section>
         
-        <section id="other_talks" class="b_art_sect">
-            <h3 class="b_art_sect_ttl">Others</h3>
+        <section id="other_talks" class="l_sect">
+            <h3 class="l_sect_ttl">Others</h3>
             <ol id="other_talks_ol" class="b_2col_list b_2col_list__99">
             </ol>
         </section>
     </article>
 
-    <article id="FUNDS" class="b_art" hidden>
-        <h2 class="b_art_ttl">Funds</h2>
+    <article id="FUNDS" class="l_art" hidden>
+        <h2 class="l_art_ttl">Funds</h2>
             <ul id="funds_ul" class="b_2col_list">
             </ul>
     </article>
