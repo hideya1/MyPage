@@ -33,6 +33,72 @@
     </header>
 
 <main>
+    <script type="text/tikz">
+\begin{tikzpicture}[auto]
+	\node (v0) at (0.0,0.0) {\text{(2,1,1)}};
+	\node (v1) at (0.0,-1.5) {\text{(2,1,2)}};
+	\node (v2) at (2.5,-1.5) {\text{(3,1,1)}};
+	\node (v3) at (0.0,-3.0) {\text{(2,1,3)}};
+	\node (v4) at (2.5,-3.0) {\text{(3,1,2)}};
+	\node (v5) at (5.0,-3.0) {\text{(4,1,1)}};
+	\node (v6) at (0.0,-4.5) {\text{(3,1,3)}};
+	\node (v7) at (2.5,-4.5) {\text{(2,1,4)}};
+	\node (v8) at (5.0,-4.5) {\text{(3,2,2)}};
+	\node (v9) at (7.5,-4.5) {\text{(4,1,2)}};
+	\node (v10) at (0.0,-6.0) {\text{(3,2,3)}};
+	\node (v11) at (2.5,-6.0) {\text{(3,1,4)}};
+	\node (v12) at (5.0,-6.0) {\text{(4,2,2)}};
+	\node (v13) at (7.5,-6.0) {\text{(4,1,3)}};
+	\node (v14) at (0.0,-7.5) {\text{(3,2,4)}};
+	\node (v15) at (2.5,-7.5) {\text{(4,1,4)}};
+	\node (v16) at (5.0,-7.5) {\text{(4,2,3)}};
+	\node (v17) at (0.0,-9.0) {\text{(4,2,4)}};
+	\node (v18) at (2.5,-9.0) {\text{(4,3,3)}};
+	\node (v19) at (0.0,-10.5) {\text{(4,3,4)}};
+	\draw[->, draw=red] (v0) to node{{\scriptsize \text{}}} (v1);
+	\draw[->, draw=green] (v0) to node{{\scriptsize \text{}}} (v2);
+	\draw[->, draw=red] (v1) to node{{\scriptsize \text{}}} (v0);
+	\draw[->, draw=green] (v2) to node{{\scriptsize \text{}}} (v0);
+	\draw[->, draw=orange] (v2) to node{{\scriptsize \text{}}} (v5);
+	\draw[->, draw=green] (v3) to node{{\scriptsize \text{}}} (v6);
+	\draw[->, draw=orange] (v3) to node{{\scriptsize \text{}}} (v7);
+	\draw[->, draw=red] (v4) to node{{\scriptsize \text{}}} (v8);
+	\draw[->, draw=orange] (v4) to node{{\scriptsize \text{}}} (v9);
+	\draw[->, draw=orange] (v5) to node{{\scriptsize \text{}}} (v2);
+	\draw[->, draw=red] (v6) to node{{\scriptsize \text{}}} (v10);
+	\draw[->, draw=green] (v6) to node{{\scriptsize \text{}}} (v3);
+	\draw[->, draw=green] (v7) to node{{\scriptsize \text{}}} (v11);
+	\draw[->, draw=orange] (v7) to node{{\scriptsize \text{}}} (v3);
+	\draw[->, draw=red] (v8) to node{{\scriptsize \text{}}} (v4);
+	\draw[->, draw=green] (v8) to node{{\scriptsize \text{}}} (v10);
+	\draw[->, draw=orange] (v8) to node{{\scriptsize \text{}}} (v12);
+	\draw[->, draw=red] (v9) to node{{\scriptsize \text{}}} (v12);
+	\draw[->, draw=green] (v9) to node{{\scriptsize \text{}}} (v13);
+	\draw[->, draw=orange] (v9) to node{{\scriptsize \text{}}} (v4);
+	\draw[->, draw=red] (v10) to node{{\scriptsize \text{}}} (v6);
+	\draw[->, draw=green] (v10) to node{{\scriptsize \text{}}} (v8);
+	\draw[->, draw=red] (v11) to node{{\scriptsize \text{}}} (v14);
+	\draw[->, draw=green] (v11) to node{{\scriptsize \text{}}} (v7);
+	\draw[->, draw=orange] (v11) to node{{\scriptsize \text{}}} (v15);
+	\draw[->, draw=red] (v12) to node{{\scriptsize \text{}}} (v9);
+	\draw[->, draw=orange] (v12) to node{{\scriptsize \text{}}} (v8);
+	\draw[->, draw=red] (v13) to node{{\scriptsize \text{}}} (v16);
+	\draw[->, draw=green] (v13) to node{{\scriptsize \text{}}} (v9);
+	\draw[->, draw=red] (v14) to node{{\scriptsize \text{}}} (v11);
+	\draw[->, draw=orange] (v14) to node{{\scriptsize \text{}}} (v17);
+	\draw[->, draw=red] (v15) to node{{\scriptsize \text{}}} (v17);
+	\draw[->, draw=orange] (v15) to node{{\scriptsize \text{}}} (v11);
+	\draw[->, draw=red] (v16) to node{{\scriptsize \text{}}} (v13);
+	\draw[->, draw=green] (v16) to node{{\scriptsize \text{}}} (v18);
+	\draw[->, draw=red] (v17) to node{{\scriptsize \text{}}} (v15);
+	\draw[->, draw=green] (v17) to node{{\scriptsize \text{}}} (v19);
+	\draw[->, draw=orange] (v17) to node{{\scriptsize \text{}}} (v14);
+	\draw[->, draw=green] (v18) to node{{\scriptsize \text{}}} (v16);
+	\draw[->, draw=orange] (v18) to node{{\scriptsize \text{}}} (v19);
+	\draw[->, draw=green] (v19) to node{{\scriptsize \text{}}} (v17);
+	\draw[->, draw=orange] (v19) to node{{\scriptsize \text{}}} (v18);
+\end{tikzpicture}
+    </script>
 <article class="l_art">
     <article id="HOME" class="l_art" hidden>
         <h2 class="l_art_ttl">Home</h2>
