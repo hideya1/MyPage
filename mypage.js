@@ -20,10 +20,10 @@ for (const m of MENU) {
     const a = document.createElement("a");
     a.textContent = m;
     if (m === "HOME") {
-        a.href = "/index.html";
+        a.href = "";
     }
     else {
-        a.href = `/index.html?menu=${m}`;
+        a.href = `?menu=${m}`;
     };
     if (menu === m) {
         a.setAttribute("class", "is_active");
