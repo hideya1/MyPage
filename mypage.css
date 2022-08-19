@@ -52,6 +52,7 @@
 }
 .b_menu {
     margin-top: 10px;
+    margin-bottom: 40px;
 }
 
 
@@ -76,6 +77,16 @@
 #edu .b_2col_list_1st {
     flex-basis: 8.5em;
 }
-#his .b_2col_list_1st {
+#his .b_2col_list_1st,
+#ORGANIZATION .b_2col_list_1st,
+#FUNDS .b_2col_list_1st,
+#世話人 .b_2col_list_1st,
+#外部資金 .b_2col_list_1st {
     flex-basis: 9.8em;
+}
+#FUNDS ul,
+#ORGANIZATION ul,
+#外部資金 ul,
+#世話人 ul {
+    margin-top: 20px;
 }

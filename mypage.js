@@ -10,6 +10,7 @@ const MENU = [
     "HOME",
     "PAPERS",
     "TALKS",
+    "ORGANIZATION",
     "FUNDS",
 ];
 const menuNav = document.getElementById("menuNav");
@@ -323,11 +324,27 @@ let Funds = [
     }
 ];
 
+let Organizing = [
+    {
+        from: "2022-01",
+        to: "Present",
+        name: "Physical Algebra and Combinatorics Seminar",
+        ulr: "https://tscrim.github.io/pacs_en.html",
+    },
+    {
+        from: "2020-04",
+        to: "2021-03",
+        name: "Kyoto Representation Theory Seminar",
+        ulr: "https://www.kurims.kyoto-u.ac.jp/en/seminar/seminar-arakawa.html",
+    },
+]
+
 
 
 //HOME
 if (menu === "HOME") {
     const keywords_p = document.getElementById("keywords_p");
+    keywords_p.className = "l_para";
     keywords_p.textContent = Keywords.join(", ") + ".";
     
 
@@ -339,7 +356,7 @@ if (menu === "HOME") {
         div1.className = "b_2col_list_1st";
         div2.className = "b_2col_list_2nd";
         div1.textContent = `${obj.type}:`;
-        div2.innerHTML = `<a href="${obj.url}">${obj.univ}</a>, ${obj.date}, Advisor: ${obj.advisor}`;
+        div2.innerHTML = `<a href="${obj.url}">${obj.univ}</a>, ${obj.date}, Supervisor: ${obj.advisor}`;
         li.append(div1, div2);
         edu_ul.append(li);
     };
@@ -432,21 +449,15 @@ if (menu === "HOME") {
     //TALKS        
     let select_ol = document.getElementById("selected_talks_ol");
     let others_ol = document.getElementById("other_talks_ol");
-    for (let i = 0, j = 0, l = Talks.length; i < l; i++) {
+    for (let i = 0, l = Talks.length; i < l; i++) {
         const talk = Talks[i];
         const li = document.createElement("li");
-        const div1 = document.createElement("div");
-        const div2 = document.createElement("div");
-        div1.className = "b_2col_list_1st";
-        div2.className = "b_2col_list_2nd";
-        div2.textContent = `${talk.title}, ${talk.at}, ${talk.date}.`;
-        li.append(div1, div2);
+        const span = document.createElement("span");
+        span.innerHTML = `${talk.title}, ${talk.at}, ${talk.date}.`;
+        li.append(span);
         if (talk.fav === true) {
-            div1.textContent = `${j+1}.`;
-            j++;
             select_ol.append(li);
         } else {
-            div1.textContent = `${i+1}.`;
             others_ol.append(li);
         };
     };
@@ -468,6 +479,24 @@ if (menu === "HOME") {
         li.append(div1, div2);
         funds_ul.append(li);
     };    
+
+
+    let art = document.getElementById(menu);
+    art.removeAttribute("hidden");
+} else if (menu === "ORGANIZATION") {
+    //ORGANIZING
+    let orgnz_ul = document.getElementById("orgnz_ul");
+    for (const obj of Organizing) {
+        let li = document.createElement("li");
+        const div1 = document.createElement("div");
+        const div2 = document.createElement("div");
+        div1.className = "b_2col_list_1st";
+        div2.className = "b_2col_list_2nd";
+        div1.textContent = `${obj.from}${ENDASH}${obj.to}:`;
+        div2.innerHTML = `<a href="${obj.url}">${obj.name}</a>.`;
+        li.append(div1, div2);
+        orgnz_ul.append(li);
+    };
 
 
     let art = document.getElementById(menu);

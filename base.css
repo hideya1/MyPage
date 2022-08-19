@@ -40,7 +40,8 @@ img {
 }
 
 a {
-    color: currentColor;
+    color: var(--soft);
+    text-decoration: none;
 }
 
 

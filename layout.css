@@ -42,7 +42,7 @@
     padding-left: 0.2em;
 }
 .l_para {
-    color: var(--soft);
+    color: var(--mainColor);
     font-size: 90%;
     font-family: sans-serif;
     margin-right: 1em;

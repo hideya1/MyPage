@@ -10,7 +10,8 @@ const MENU = [
     "ホーム",
     "論文",
     "招待講演",
-    "研究資金",
+    "世話人",
+    "外部資金",
 ];
 const menuNav = document.getElementById("menuNav");
 const ul = document.createElement("ul");
@@ -75,45 +76,45 @@ let Education = [
 let ResearchHistory = [    
     {
         from: "2022-04",
-        to: "Present",
-        at: "Osaka Central Advanced Mathematical Institute, Osaka Metropolitan University",
+        to: "現在",
+        at: "大阪公立大学数学研究所",
         url: "http://www.sci.osaka-cu.ac.jp/OCAMI/",
-        as: "JSPS research fellow PD"
+        as: "日本学術振興会特別研究員 PD"
     },   
     {
         from: "2021-04",
         to: "2022-03",
-        at: "Osaka City University Advanced Mathematical Institute, Osaka City University",
+        at: "大阪市立大学数学研究所",
         url: "http://www.sci.osaka-cu.ac.jp/OCAMI/",
-        as: "JSPS research fellow PD"
+        as: "日本学術振興会特別研究員 PD"
     },   
     {
         from: "2020-04",
         to: "2021-03",
-        at: "Kyoto University",
-        url: "https://www.kyoto-u.ac.jp/en",
-        as: "part-time teacher"
+        at: "京都大学",
+        url: "https://www.kyoto-u.ac.jp/ja",
+        as: "非常勤講師"
     },   
     {
         from: "2019-10",
         to: "2021-03",
-        at: "Research Institute for Mathematical Sciences, Kyoto University",
-        url: "https://www.kurims.kyoto-u.ac.jp/en/index.html",
-        as: "part-time researcher"
+        at: "京都大学数理解析研究所",
+        url: "https://www.kurims.kyoto-u.ac.jp/ja/index.html",
+        as: "非常勤研究員"
     },   
     {
         from: "2019-04",
         to: "2019-09",
-        at: "Graduate School of Information Science and Technology, Osaka University",
-        url: "https://www.ist.osaka-u.ac.jp/english/",
-        as: "project researcher"
+        at: "大阪大学情報科学研究科",
+        url: "https://www.ist.osaka-u.ac.jp/japanese/",
+        as: "特任研究員"
     },
     {
         from: "2017-04",
         to: "2019-03",
-        at: "Department of Mathematics, Tokyo Institute of Technology",
-        url: "https://www.titech.ac.jp/english",
-        as: "JSPS research fellow DC2"
+        at: "東京工業大学理学院数学系",
+        url: "https://www.titech.ac.jp/",
+        as: "日本学術振興会特別研究員 DC2"
     },
 ];
 
@@ -135,7 +136,7 @@ let Papers = [
     {
         coauthors: [],
         title: "Global crystal bases for integrable modules over a quantum symmetric pair of type AIII",
-        journal: "Representation Theory 25 (2021), 27\u201366",
+        journal: "Re現在ation Theory 25 (2021), 27\u201366",
         MRnumber: "MR4198491",
         url: "https://www.ams.org/journals/ert/2021-25-02/S1088-4165-2021-00556-X/",
     },
@@ -191,7 +192,7 @@ let Preprints = [
     },
     {
         coauthors: [],
-        title: "A new tableau model for irreducible polynomial representations of the orthogonal group",
+        title: "A new tableau model for irreducible polynomial re現在ations of the orthogonal group",
         at: "arXiv:2107.00170",
         url: "https://arxiv.org/abs/2107.00170"
     },
@@ -224,7 +225,7 @@ let Talks = [
     },
     {
         date: "2020-10-28",
-        title: "Recent progress on representation theory of iquantum groups",
+        title: "Recent progress on re現在ation theory of iquantum groups",
         at: "Rikkyo University (online)",
         fav: false,
     },
@@ -236,14 +237,14 @@ let Talks = [
     },
     {
         date: "2020-07-14",
-        title: "Combinatorial representation theory arising from quantum symmetric pairs",
+        title: "Combinatorial re現在ation theory arising from quantum symmetric pairs",
         at: "KIAS Workshop on Combinatorial Problems of Algebraic Origin (online)",
         fav: true,
     },
     {
         date: "2020-05-14",
         title: "Classical weight modules over $i$-quantum groups",
-        at: "Kyoto Representation Theory Seminar (online)",
+        at: "Kyoto Re現在ation Theory Seminar (online)",
         fav: false,
     },
     {
@@ -255,12 +256,12 @@ let Talks = [
     {
         date: "2019-11-29",
         title: "Classical modules over $i$-quantum groups",
-        at: "Conference on Algebraic Representation Theory 2019, National Tsing Hua University",
+        at: "Conference on Algebraic Re現在ation Theory 2019, National Tsing Hua University",
         fav: false,
     },
     {
         date: "2019-05-10",
-        title: "A new approach to classical representations of non-standard quantum group $U'_q(\\mathfrak{so}_n)$",
+        title: "A new approach to classical re現在ations of non-standard quantum group $U'_q(\\mathfrak{so}_n)$",
         at: "Minami Osaka Daisu Seminar, Osaka Prefecture University",
         fav: false,
     },
@@ -273,7 +274,7 @@ let Talks = [
     {
         date: "2019-02",
         title: "Global crystal bases of modules over a quantum symmetric pair",
-        at: "Mini-Workshop on Representation Theory, Kyoto University",
+        at: "Mini-Workshop on Re現在ation Theory, Kyoto University",
         fav: false,
     },
     {
@@ -291,7 +292,7 @@ let Talks = [
     {
         date: "2017-11",
         title: "Kazhdan-Lusztig bases and quantum symmetric pairs",
-        at: "Conference on Algebraic Representation Theory 2017",
+        at: "Conference on Algebraic Re現在ation Theory 2017",
         fav: false,
     },
 ];
@@ -301,27 +302,42 @@ let Funds = [
         from: "2021-04",
         to: "2024-03",
         number: "21J00013",
-        name: "Combinatorial structures appearing in representation theory of quantum symmetric subalgebras, and their applications",
-        category: "Grant-in-Aid for JSPS Fellows",
-        url: "https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-21J00013/"
+        name: "量子対称部分代数の表現論に現れる組合せ構造とその応用",
+        category: "特別研究員奨励費",
+        url: "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-21J00013/"
     },
     {
         from: "2020-04",
         to: "2024-03",
         number: "20K14286",
-        name: "Weight modules and crystal bases for quantum symmetric pairs",
-        category: "Grant-in-Aid for Early-Career Scientists",
-        url: "https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-20K14286/"
+        name: "量子対称対のウェイト表現と結晶基底",
+        category: "若手研究",
+        url: "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-20K14286/"
     },
     {
         from: "2017-04",
         to: "2019-03",
         number: "17J00172",
-        name: "An approach to the Kazhdan-Lusztig polynomials via the representation theory of quantum symmetric pairs",
-        category: "Grant-in-Aid for JSPS Fellows",
-        url: "https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-17J00172/"
+        name: "カジュダン・ルスティック多項式への量子対称対の表現論によるアプローチ",
+        category: "特別研究員奨励費",
+        url: "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-17J00172/"
     }
 ];
+
+let Organizing = [
+    {
+        from: "2022-01",
+        to: "現在",
+        name: "物理的な代数と組合せ数学セミナー",
+        ulr: "https://tscrim.github.io/pacs.html",
+    },
+    {
+        from: "2020-04",
+        to: "2021-03",
+        name: "京都表現論セミナー",
+        ulr: "https://www.kurims.kyoto-u.ac.jp/ja/seminar/seminar-arakawa.html",
+    },
+]
 
 
 
@@ -409,13 +425,9 @@ if (menu === "ホーム") {
     for (let i = 0, l = Papers.length; i < l; i++) {
         const paper = Papers[i];
         const li = document.createElement("li");
-        const div1 = document.createElement("div");
-        const div2 = document.createElement("div");
-        div1.className = "b_2col_list_1st";
-        div2.className = "b_2col_list_2nd";
-        div1.textContent = `${i+1}.`
-        div2.innerHTML = format_paper(paper);
-        li.append(div1, div2);
+        const span = document.createElement("span");
+        span.innerHTML = format_paper(paper);
+        li.append(span);
         papers_ol.append(li);
     }
     
@@ -423,13 +435,9 @@ if (menu === "ホーム") {
     for (let i = 0, l = Preprints.length; i < l; i++) {
         const preprint = Preprints[i];
         const li = document.createElement("li");
-        const div1 = document.createElement("div");
-        const div2 = document.createElement("div");
-        div1.className = "b_2col_list_1st";
-        div2.className = "b_2col_list_2nd";
-        div1.textContent = `${i+1}.`
-        div2.innerHTML = format_preprint(preprint);
-        li.append(div1, div2);
+        const span = document.createElement("span");
+        span.innerHTML = format_preprint(preprint);
+        li.append(span);
         pre_ol.append(li);
     };
     
@@ -440,21 +448,15 @@ if (menu === "ホーム") {
     //TALKS        
     let select_ol = document.getElementById("selected_talks_ol");
     let others_ol = document.getElementById("other_talks_ol");
-    for (let i = 0, j = 0, l = Talks.length; i < l; i++) {
+    for (let i = 0, l = Talks.length; i < l; i++) {
         const talk = Talks[i];
         const li = document.createElement("li");
-        const div1 = document.createElement("div");
-        const div2 = document.createElement("div");
-        div1.className = "b_2col_list_1st";
-        div2.className = "b_2col_list_2nd";
-        div2.textContent = `${talk.title}, ${talk.at}, ${talk.date}.`;
-        li.append(div1, div2);
+        const span = document.createElement("span");
+        span.innerHTML = `${talk.title}, ${talk.at}, ${talk.date}.`;
+        li.append(span);
         if (talk.fav === true) {
-            div1.textContent = `${j+1}.`;
-            j++;
             select_ol.append(li);
         } else {
-            div1.textContent = `${i+1}.`;
             others_ol.append(li);
         };
     };
@@ -462,7 +464,7 @@ if (menu === "ホーム") {
 
     let art = document.getElementById(menu);
     art.removeAttribute("hidden");
-} else if (menu === "研究資金") {
+} else if (menu === "外部資金") {
     //FUNDS
     let funds_ul = document.getElementById("funds_ul");
     for (const obj of Funds) {
@@ -476,6 +478,24 @@ if (menu === "ホーム") {
         li.append(div1, div2);
         funds_ul.append(li);
     };    
+
+
+    let art = document.getElementById(menu);
+    art.removeAttribute("hidden");
+} else if (menu === "世話人") {
+    //ORGANIZING
+    let orgnz_ul = document.getElementById("orgnz_ul");
+    for (const obj of Organizing) {
+        let li = document.createElement("li");
+        const div1 = document.createElement("div");
+        const div2 = document.createElement("div");
+        div1.className = "b_2col_list_1st";
+        div2.className = "b_2col_list_2nd";
+        div1.textContent = `${obj.from}${ENDASH}${obj.to}:`;
+        div2.innerHTML = `<a href="${obj.url}">${obj.name}</a>.`;
+        li.append(div1, div2);
+        orgnz_ul.append(li);
+    };
 
 
     let art = document.getElementById(menu);
