@@ -245,7 +245,7 @@ ol {
 }
 @media (max-width: 768px) {
     .b_langSelector {
-        flex-basis: 6rem;
+        min-width: fit-content;
     }
 }
 

@@ -239,7 +239,9 @@ ol > li::before {
 
 @media (max-width: 768px) {
   .b_langSelector {
-    flex-basis: 6rem;
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
   }
 }
 .b_2col_list > li::before {
