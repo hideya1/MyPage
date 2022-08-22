@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="htmlTag" lang="en">
 <head>
-<title>Hideya Watanabe</title>
+<title id="tabTtl">Hideya Watanabe</title>
 <meta charset='UTF-8'>
-<base href="https://hideya1.github.io/MyPage/"><script type="text/x-mathjax-config">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="">
+<script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax:{inlineMath:[['\$','\$']],
         processEscapes:true
@@ -12,19 +14,25 @@
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 <link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/mypage.css">
 <script src="https://tikzjax.com/v1/tikzjax.js"></script>
-<link rel="stylesheet" href="base.css">
-<link rel="stylesheet" href="layout.css">
-<link rel="stylesheet" href="mypage.css">
 <script src="mypage.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="l_header">
-            <div class="l_header_inner b_logoTtl">
-                <a href=""><img class="b_logoTtl_logo" src="logo.jpg"></a>
-                <h1 class="l_head_ttl b_logoTtl_ttl">Hideya Watanabe</h1>
+            <div class="l_header_inner b_logoTtl_wrapper">
+                <div id="logoTtl" class="b_logoTtl">
+                <a href="?=home"><img class="b_logoTtl_logo" src="logo.jpg"></a>
+                <a href="?=home" style="text-decoration: none;">
+                <h1 id="headTtl" class="l_head_ttl b_logoTtl_ttl">Hideya Watanabe</h1></a>
+                </div>
+                <div id="langSelector" class="b_langSelector">
+                <a class="is_active" href="?lang=en">English</a>
+                <a href="?lang=ja">日本語</a>
+                </div>
             </div>
             <!--l_header_inner-->
         </div>
@@ -32,12 +40,18 @@
         </nav>
     </header>
 
-<main>
-<article class="l_art">
-    <article id="HOME" class="l_art" hidden>
+<main class="l_content">
+    <article id="home" class="l_art" hidden>
         <h2 class="l_art_ttl">Home</h2>
-        <img src="image/AI_110.png" height="300px" width="350px" style="float: right; margin-top: 1em; margin-left: 2em;">
         <section class="l_sect">
+            <ul id="home_menu" class="l_para">
+            </ul>
+        </section>
+    </article>
+
+    <article id="profile" class="l_art" hidden>
+        <h2 class="l_art_ttl">Profile</h2>
+        <section id="interests" class="l_sect">
             <h3 class="l_sect_ttl">Research Interests</h3>
             <p class="l_para">
                 Representation theory of Lie algebras and related objects, and their interrelations.
@@ -62,14 +76,13 @@
         </section>
     </article>
 
-    <article id="PAPERS" class="l_art" hidden>
+    <article id="papers" class="l_art" hidden>
         <h2 class="l_art_ttl">Papers</h2>
         <section id="papers" class="l_sect">
             <h3 class="l_sect_ttl">Published</h3>
             <ol id="papers_ol" class="l_para">
             </ol>
         </section>
-
         <section id="preprints" class="l_sect">
             <h3 class="l_sect_ttl">Preprints</h3>
             <ol id="preprints_ol" class="l_para">
@@ -77,33 +90,25 @@
         </section>
     </article>
     
-    <article id="TALKS" class="l_art" hidden>
+    <article id="talks" class="l_art" hidden>
         <h2 class="l_art_ttl">Invited Talks</h2>
-        <section id="selected_talks" class="l_sect">
-            <h3 class="l_sect_ttl">Selected</h3>
-            <ol id="selected_talks_ol" class="l_para">
-            </ol>
-        </section>
-        
-        <section id="other_talks" class="l_sect">
-            <h3 class="l_sect_ttl">Others</h3>
-            <ol id="other_talks_ol" class="l_para">
+        <section class="l_sect">
+            <ol class="l_para">
             </ol>
         </section>
     </article>
 
-    <article id="FUNDS" class="l_art" hidden>
-        <h2 class="l_art_ttl">Funds</h2>
-            <ul id="funds_ul" class="l_para b_2col_list">
-            </ul>
-    </article>
-
-    <article id="ORGANIZATION" class="l_art" hidden>
+    <article id="organization" class="l_art" hidden>
         <h2 class="l_art_ttl">Organization</h2>
             <ul id="orgnz_ul" class="l_para b_2col_list">
             </ul>
     </article>
-</article>
+
+    <article id="funds" class="l_art" hidden>
+        <h2 class="l_art_ttl">Funds</h2>
+            <ul id="funds_ul" class="l_para b_2col_list">
+            </ul>
+    </article>
 </main>
 
 <footer class="l_footer">
