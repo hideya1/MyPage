@@ -266,25 +266,21 @@ ol.b_2col_list__99 .b_2col_list_1st {
   flex: 0 0 2em;
 }
 
-#edu .b_2col_list_1st {
+#edu_ul .b_2col_list_1st {
   flex-basis: 8.5em;
 }
 
-#edu .ja .b_2col_list_1st {
-  flex-basis: 6em;
-}
-
-#his .b_2col_list_1st,
+#his_ul .b_2col_list_1st,
 #organization .b_2col_list_1st,
 #funds .b_2col_list_1st {
   flex-basis: 10em;
 }
 
 @media (max-width: 768px) {
-  #edu .b_2col_list_1st {
+  #edu_ul .b_2col_list_1st {
     flex-basis: 4em;
   }
-  #his .b_2col_list_1st,
+  #his_ul .b_2col_list_1st,
 #organization .b_2col_list_1st,
 #funds .b_2col_list_1st {
     flex-basis: 5em;
