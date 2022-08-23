@@ -219,6 +219,10 @@ ol > li::before {
   pointer-events: none;
 }
 
+.b_menu {
+  margin-top: 1rem;
+}
+
 #home_menu a {
   text-decoration: none;
   font-size: larger;
