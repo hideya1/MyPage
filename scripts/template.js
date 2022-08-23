@@ -2,7 +2,7 @@
 //
 const url = new URL(location.href),
 pathname = url.pathname,
-menu = pathname.slice(pathname.lastIndexOf("/"),-5);
+menu = pathname.slice(pathname.lastIndexOf("/")+1,-5);
 //
 //header
 const header = document.createElement("header"),
@@ -30,9 +30,8 @@ headerTtl_h.className = "l_head_ttl b_logoTtl_ttl";
 headerTtl_h.textContent = "Hideya Watanabe";
 header_langSelector.className = "b_langSelector";
 en_a.className = "is_active";
-en_a.href = `${pathname}`;
 en_a.textContent = "English";
-ja_a.href = `${pathname.slice(0,-5)}_ja.html`;
+ja_a.href = pathname.replace(menu, `${menu}_ja`);
 ja_a.textContent = "日本語";
 menu_nav.className = "b_menu";
 //menu
@@ -41,8 +40,8 @@ for (const m in MENU) {
     const li = document.createElement("li"),
     a = document.createElement("a");
     a.textContent = MENU[m][0];
-    a.href = `/${m}.html`;
-    if (menu === `/${m}`) {
+    a.href = pathname.replace(menu, m);
+    if (menu === `${m}`) {
         a.setAttribute("class", "is_active");
     };
     li.append(a);

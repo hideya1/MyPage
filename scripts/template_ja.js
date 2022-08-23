@@ -1,7 +1,8 @@
 "use strict";
 //
-const url = new URL(location.href), pathname = url.pathname,
-menu = pathname.slice(0,-8);
+const url = new URL(location.href),
+pathname = url.pathname,
+menu = pathname.slice(pathname.lastIndexOf("/")+1,-8);
 //
 //header
 const header = document.createElement("header"),
@@ -28,10 +29,9 @@ headerTtl_a.style = "text-decoration: none;"
 headerTtl_h.className = "l_head_ttl b_logoTtl_ttl";
 headerTtl_h.innerHTML = "<ruby><rb>渡邉</rb><rt>わたなべ</rt></ruby><ruby><rb>英也</rb><rt>ひでや</rt></ruby>";
 header_langSelector.className = "b_langSelector";
-en_a.href = `${menu}.html`;
+en_a.href = pathname.replace(`${menu}_ja`, menu);
 en_a.textContent = "English";
 ja_a.className = "is_active";
-ja_a.href = `${menu}_ja.html`;
 ja_a.textContent = "日本語";
 menu_nav.className = "b_menu";
 //menu
@@ -40,8 +40,8 @@ for (const m in MENU) {
     const li = document.createElement("li"),
     a = document.createElement("a");
     a.textContent = MENU[m][1];
-    a.href = `/${m}_ja.html`;
-    if (menu === `/${m}`) {
+    a.href = pathname.replace(menu, m);
+    if (menu === `${m}`) {
         a.setAttribute("class", "is_active");
     };
     li.append(a);

@@ -4,7 +4,7 @@ for (const m in MENU) {
         const li = document.createElement("li"),
         a = document.createElement("a");
         a.textContent = MENU[m][0];
-        a.href = `${m}.html`;
+        a.href = pathname.replace(menu, m);
         li.append(a);
         home_ul.append(li);
     }
