@@ -1,7 +1,7 @@
 "use strict";
 //
 const url = new URL(location.href), pathname = url.pathname,
-menu = pathname.slice(0,-5);
+menu = pathname.slice(0,-8);
 //
 //header
 const header = document.createElement("header"),
@@ -20,17 +20,17 @@ menu_nav = document.createElement("nav");
 header_container.className = "l_header";
 header_inner.className = "l_header_inner b_logoTtl_wrapper";
 header_logoTtl.className = "b_logoTtl";
-logo_a.href = "home.html";
+logo_a.href = "home_ja.html";
 logo_img.className = "b_logoTtl_logo";
 logo_img.src = "image/logo.jpg";
-headerTtl_a.href = "home.html";
+headerTtl_a.href = "home_ja.html";
 headerTtl_a.style = "text-decoration: none;"
 headerTtl_h.className = "l_head_ttl b_logoTtl_ttl";
-headerTtl_h.textContent = "Hideya Watanabe";
+headerTtl_h.innerHTML = "<ruby><rb>渡邉</rb><rt>わたなべ</rt></ruby><ruby><rb>英也</rb><rt>ひでや</rt></ruby>";
 header_langSelector.className = "b_langSelector";
-en_a.className = "is_active";
-en_a.href = `${pathname}`;
+en_a.href = `${menu}.html`;
 en_a.textContent = "English";
+ja_a.className = "is_active";
 ja_a.href = `${menu}_ja.html`;
 ja_a.textContent = "日本語";
 menu_nav.className = "b_menu";
@@ -39,8 +39,8 @@ const menu_ul = document.createElement("ul");
 for (const m in MENU) {
     const li = document.createElement("li"),
     a = document.createElement("a");
-    a.textContent = MENU[m][0];
-    a.href = `/${m}.html`;
+    a.textContent = MENU[m][1];
+    a.href = `/${m}_ja.html`;
     if (menu === `/${m}`) {
         a.setAttribute("class", "is_active");
     };

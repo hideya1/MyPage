@@ -123,7 +123,7 @@ ol > li::before {
 }
 
 .l_subSect {
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   padding-right: 1rem;
   padding-left: 1rem;
 }
@@ -138,8 +138,11 @@ ol > li::before {
   font-size: 90%;
   font-family: sans-serif;
   padding-right: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.25rem;
   padding-left: 1rem;
+}
+.l_para:last-of-type {
+  padding-bottom: 0;
 }
 .l_para > ul {
   padding-right: 1rem;
@@ -271,8 +274,8 @@ ol.b_2col_list__99 .b_2col_list_1st {
 }
 
 #his_ul .b_2col_list_1st,
-#organization .b_2col_list_1st,
-#funds .b_2col_list_1st {
+#orgnz_ul .b_2col_list_1st,
+#funds_ul .b_2col_list_1st {
   flex-basis: 10em;
 }
 
@@ -281,8 +284,8 @@ ol.b_2col_list__99 .b_2col_list_1st {
     flex-basis: 4em;
   }
   #his_ul .b_2col_list_1st,
-#organization .b_2col_list_1st,
-#funds .b_2col_list_1st {
+#orgnz_ul .b_2col_list_1st,
+#funds_ul .b_2col_list_1st {
     flex-basis: 5em;
   }
 }
