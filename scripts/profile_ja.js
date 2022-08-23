@@ -19,7 +19,7 @@ for (const obj of Education) {
     div1.style = "flex-basis: 5rem;"
     div2.className = "b_2col_list_2nd";
     div1.textContent = `${obj.type[1]}:`;
-    div2.innerHTML = `<a href="${obj.url[1]}">${obj.univ[1]}</a>, ${obj.date}, Supervisor: ${obj.advisor[1]}`;
+    div2.innerHTML = `<a href="${obj.url[1]}">${obj.univ[1]}</a>, ${obj.date}, 指導教員: ${obj.advisor[1]}`;
     li.append(div1, div2);
     edu_ul.append(li);
 };
