@@ -32,7 +32,7 @@ header_langSelector.className = "b_langSelector";
 en_a.className = "is_active";
 en_a.href = `${pathname}`;
 en_a.textContent = "English";
-ja_a.href = `${menu}_ja.html`;
+ja_a.href = `${pathname.slice(0,-5)}_ja.html`;
 ja_a.textContent = "日本語";
 menu_nav.className = "b_menu";
 //menu
