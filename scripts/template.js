@@ -1,7 +1,8 @@
 "use strict";
 //
-const url = new URL(location.href), pathname = url.pathname,
-menu = pathname.slice(0,-5);
+const url = new URL(location.href),
+pathname = url.pathname,
+menu = pathname.slice(pathname.lastIndexOf("/"),-5);
 //
 //header
 const header = document.createElement("header"),
