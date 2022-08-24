@@ -36,18 +36,29 @@ ja_a.textContent = "日本語";
 menu_nav.className = "b_menu";
 //menu
 const menu_ul = document.createElement("ul");
-for (const m in MENU) {
-    const li = document.createElement("li"),
-    a = document.createElement("a");
-    a.textContent = MENU[m][0];
-    a.href = pathname.replace(menu, m);
-    if (menu === `${m}`) {
-        a.setAttribute("class", "is_active");
+async function load(){
+    //load json
+    const data = await (fetch("scripts/data.json")),
+    json = await data.json(),
+    MENU = await json["menu"];
+    //load json    
+    //build menu
+    for (const m in MENU) {
+        const li = document.createElement("li"),
+        a = document.createElement("a");
+        a.textContent = MENU[m][0];
+        a.href = pathname.replace(menu, m);
+        if (menu === `${m}`) {
+            a.setAttribute("class", "is_active");
+        };
+        li.append(a);
+        menu_ul.append(li);
     };
-    li.append(a);
-    menu_ul.append(li);
-};
-//build
+    //build menu
+}
+load();
+//menu
+//build header
 logo_a.append(logo_img);
 headerTtl_a.append(headerTtl_h);
 header_logoTtl.append(logo_a, headerTtl_a);
