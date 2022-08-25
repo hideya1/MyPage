@@ -1,12 +1,10 @@
 @use "blues";
-
-
 html {
-    font-size: 18px;
+    font-size: 20px;
 }
 @media (max-width: 768px) {
     html {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
@@ -20,7 +18,7 @@ body *,
 }
 
 body {
-    max-width: 1000px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     font-family: serif;
@@ -39,14 +37,12 @@ img {
 
 a {
     color: var(--textColor_weak);
-    text-decoration-color: var(--pale);
+    text-decoration-color: var(--textColor_weak);
     text-decoration-thickness: 1px;
 }
 
 
-ul {
-    & > li {
-        margin-bottom: 0.5rem;
+ul > li {
         display: flex;
         &::before {
             content: "●";
@@ -54,26 +50,27 @@ ul {
             color: var(--textColor);
             flex: 0 0 1rem;
         }
-    }
+        & > * {
+            flex: 1 1 auto;
+        }
 }
 
 
 ol {
     counter-reset: orderedItem;
     & > li {
-        margin-bottom: 0.5rem;
         display: flex;
         &::before {
             counter-increment: orderedItem;
             content: counter(orderedItem)".";
             flex: 0 0 1rem;
-            text-align: right;
             margin-right: 1rem;
+        }
+        & > * {
+            flex: 1 1 auto;
         }
     }
 }
-
-
 
 
 
@@ -86,7 +83,7 @@ ol {
 /*layout*/
 .l_header {
     padding-top: 1.5rem;
-    border-bottom: 1px solid var(--mainColor);
+    border-bottom: 0.05rem solid var(--mainColor);
     &_inner {
         padding-right: 1rem;
         padding-left: 1rem;
@@ -103,18 +100,20 @@ ol {
 
 .l_art_ttl {
     color: var(--mainColor);
-    border-left: 5px solid var(--mainColor);
-    margin-left: 5px;
+    border-left: 0.2rem solid var(--mainColor);
+    padding-left: 0.2rem;
+    margin-left: 0.2rem;
 }
 .l_sect {
     padding-top: 1rem;
     padding-right: 1rem;
     padding-left: 1rem;
     &_ttl {
-        font-size: 110%;
+        font-size: 1.2rem;
         color: var(--strong);
-        border-left: 3px solid var(--strong);
-        margin-left: 3px;
+        border-left: 0.1rem solid var(--strong);
+        padding-left: 0.1rem;
+        margin-left: 0.1rem;
     }
 }
 .l_subSect {
@@ -122,14 +121,13 @@ ol {
     padding-right: 1rem;
     padding-left: 1rem;
     &_ttl {
-        font-size: 105%;
+        font-size: 1.1rem;
         color: var(--bright);
-        margin-left: 0.2rem;
+        margin-left: 0.1rem;
     }
 }
 .l_para {
     color: var(--soft);
-    font-size: 90%;
     font-family: sans-serif;
     padding-right: 1rem;
     padding-bottom: 0.25rem;
@@ -145,7 +143,7 @@ ol {
 
 .l_footer {
     margin-bottom: 2rem;
-    border-top: 1px solid var(--mainColor);
+    border-top: 0.05rem solid var(--mainColor);
     &_inner {
         padding-right: 1rem;
         padding-left: 1rem;
@@ -155,8 +153,6 @@ ol {
     }
 
 }
-
-
 
 
 
