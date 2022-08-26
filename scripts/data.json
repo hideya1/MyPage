@@ -4,7 +4,8 @@
         "papers" : ["PAPERS", "論文"],
         "talks" : ["TALKS", "招待講演"],
         "organization" : ["ORGANIZATIONS", "世話人"],
-        "funds" : ["FUNDS", "外部資金"]
+        "funds" : ["FUNDS", "外部資金"],
+        "spThx" : ["SPECIAL THANKS", "お世話になったもの"]
     },
     "kw": [
         ["representation theory", "表現論"],
@@ -300,5 +301,22 @@
             "category": ["Grant-in-Aid for JSPS Fellows", "特別研究員奨励費"],
             "url": ["https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-17J00172/", "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-17J00172/"]
         }
-    ]    
+    ],
+    "spThx": [
+        {
+            "cat": "book",
+            "name": ["", "おごだでませんように"],
+            "url": ["", "https://www.shogakukan.co.jp/books/09726329"]
+        },
+        {
+            "cat": "organization",
+            "name": ["", "住吉区 子ども・子育てプラザ"],
+            "url": ["", "https://www.osaka-kosodate.net/plaza/sumiyoshi/"]
+        },
+        {
+            "cat": "organization",
+            "name": ["Yuinomori Arakawa", "ゆいの森あらかわ"],
+            "url": ["https://www-yuinomori-city-arakawa-tokyo-jp.translate.goog/index.html?_x_tr_sl=ja&_x_tr_tl=en&_x_tr_hl=ja", "https://www.yuinomori.city.arakawa.tokyo.jp/index.html"]
+        }
+    ]
 }
