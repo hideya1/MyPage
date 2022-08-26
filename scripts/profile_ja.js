@@ -21,7 +21,7 @@ async function mk_kw(){
 mk_kw();
 
 
-const edu_ul = document.getElementById("edu_ul"),
+const edu_ul = document.getElementById("edu_ul_ja"),
 edu_frag = document.createDocumentFragment();
 async function mk_edu(){
     //load json
@@ -35,7 +35,6 @@ async function mk_edu(){
         div1 = document.createElement("div"),
         div2 = document.createElement("div");
         div1.className = "b_2col_list_1st";
-        div1.style = "flex-basis: 5rem;"
         div2.className = "b_2col_list_2nd";
         div1.textContent = `${obj.type[1]}:`;
         div2.innerHTML = `<a href="${obj.url[1]}">${obj.univ[1]}</a>, ${obj.date}, 指導教員: ${obj.advisor[1]}`;

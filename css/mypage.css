@@ -60,6 +60,13 @@ a {
   text-decoration-thickness: 1px;
 }
 
+li {
+  padding-bottom: 0.8rem;
+}
+li:last-of-type {
+  padding-bottom: 0;
+}
+
 ul > li {
   display: flex;
 }
@@ -198,6 +205,7 @@ ol > li > * {
 }
 .b_menu ul > li {
   display: initial;
+  padding-bottom: 0;
 }
 .b_menu ul > li::before {
   content: none;
@@ -280,6 +288,10 @@ ol.b_2col_list__99 .b_2col_list_1st {
 
 #edu_ul .b_2col_list_1st {
   flex-basis: 8.5em;
+}
+
+#edu_ul_ja .b_2col_list_1st {
+  flex-basis: 5.5em;
 }
 
 #his_ul .b_2col_list_1st,
