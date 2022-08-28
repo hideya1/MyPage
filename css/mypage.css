@@ -57,7 +57,7 @@ a {
   color: var(--textColor_weak);
   -webkit-text-decoration-color: var(--textColor_weak);
           text-decoration-color: var(--textColor_weak);
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: 0.05rem;
 }
 
 li {
@@ -96,7 +96,6 @@ ol > li > * {
   flex: 1 1 auto;
 }
 
-/*layout*/
 .l_header {
   padding-top: 1.5rem;
   border-bottom: 0.05rem solid var(--mainColor);
@@ -172,28 +171,15 @@ ol > li > * {
   font-family: sans-serif;
 }
 
-/*parts*/
-.b_logoTtl_wrapper {
+.b_flex {
   display: flex;
-  justify-content: space-between;
+}
+.b_flex > * {
+  flex: 0 0 auto;
 }
 
-.b_logoTtl {
-  display: flex;
-  align-items: flex-end;
-  height: 3em;
-}
-.b_logoTtl_logo {
-  height: 3em;
-  width: 3em;
-  margin-right: 1em;
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-.b_logoTtl_ttl {
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
+.h_spaceBetween {
+  justify-content: space-between;
 }
 
 .b_menu ul {
@@ -203,11 +189,11 @@ ol > li > * {
   justify-content: center;
   list-style-type: none;
 }
-.b_menu ul > li {
+.b_menu ul li {
   display: initial;
   padding-bottom: 0;
 }
-.b_menu ul > li::before {
+.b_menu ul li::before {
   content: none;
 }
 
@@ -230,6 +216,36 @@ ol > li > * {
   border-bottom-color: var(--mainColor);
   color: var(--mainColor);
   pointer-events: none;
+}
+
+.b_logoTtl {
+  display: flex;
+  align-items: flex-end;
+  height: 3em;
+}
+.b_logoTtl_logo {
+  height: 3em;
+  margin-right: 1em;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.b_logoTtl_ttl {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
+.b_2col_list > li::before {
+  content: none;
+}
+
+.b_2col_list_1st {
+  flex: 0 0 4em;
+  margin-right: 1ex;
+}
+
+.b_2col_list_2nd {
+  flex: 1 1 auto;
 }
 
 .b_menu {
@@ -264,28 +280,6 @@ ol > li > * {
     min-width: fit-content;
   }
 }
-.b_2col_list > li::before {
-  content: none;
-}
-
-.b_2col_list_1st {
-  flex: 0 0 4em;
-  margin-right: 1ex;
-}
-
-.b_2col_list_2nd {
-  flex: 1 1 auto;
-}
-
-ol.b_2col_list .b_2col_list_1st {
-  flex: 0 0 1em;
-  text-align: right;
-}
-
-ol.b_2col_list__99 .b_2col_list_1st {
-  flex: 0 0 2em;
-}
-
 #edu_ul .b_2col_list_1st {
   flex-basis: 8.5em;
 }

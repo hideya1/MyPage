@@ -19,7 +19,7 @@ ja_a = document.createElement("a"),
 menu_nav = document.createElement("nav");
 //
 header_container.className = "l_header";
-header_inner.className = "l_header_inner b_logoTtl_wrapper";
+header_inner.className = "l_header_inner b_flex h_spaceBetween";
 header_logoTtl.className = "b_logoTtl";
 logo_a.href = "home.html";
 logo_img.className = "b_logoTtl_logo";
@@ -33,7 +33,7 @@ en_a.className = "is_active";
 en_a.textContent = "English";
 ja_a.href = pathname.replace(menu, `${menu}_ja`);
 ja_a.textContent = "日本語";
-menu_nav.className = "b_menu";
+menu_nav.className = "b_menu l_header_inner";
 //menu
 const menu_ul = document.createElement("ul");
 async function load(){

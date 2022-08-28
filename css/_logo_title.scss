@@ -1,0 +1,14 @@
+.b_logoTtl {
+    display: flex;
+    align-items: flex-end;
+    height: 3em;
+    &_logo {
+        height: 3em;
+        margin-right: 1em;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+    &_ttl {
+        min-width: fit-content;
+    }
+}
