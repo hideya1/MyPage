@@ -8,6 +8,7 @@ menu = pathname.slice(pathname.lastIndexOf("/")+1,-8);
 const header = document.createElement("header"),
 header_container = document.createElement("div"),
 header_inner = document.createElement("div"),
+logoTtl_langSelector_wrapper = document.createElement("div"),
 header_logoTtl = document.createElement("div"),
 logo_a  = document.createElement("a"),
 logo_img = document.createElement("img"),
@@ -19,12 +20,15 @@ ja_a = document.createElement("a"),
 menu_nav = document.createElement("nav");
 //
 header_container.className = "l_header";
-header_inner.className = "l_header_inner b_flex h_spaceBetween";
+header_inner.className = "l_header_inner";
+logoTtl_langSelector_wrapper.className = "b_flex h_spaceBetween"
 header_logoTtl.className = "b_logoTtl";
-logo_a.href = "home_ja.html";
+header_logoTtl.style = "flex: 0 1 auto;"
+logo_a.href = "home.html";
+logo_a.style = "flex: 0 0 auto";
 logo_img.className = "b_logoTtl_logo";
 logo_img.src = "image/logo.jpg";
-headerTtl_a.href = "home_ja.html";
+headerTtl_a.href = "home.html";
 headerTtl_a.style = "text-decoration: none;"
 headerTtl_h.className = "l_head_ttl b_logoTtl_ttl";
 headerTtl_h.innerHTML = "<ruby><rb>渡邉</rb><rt>わたなべ</rt></ruby><ruby><rb>英也</rb><rt>ひでや</rt></ruby>";
@@ -62,10 +66,11 @@ logo_a.append(logo_img);
 headerTtl_a.append(headerTtl_h);
 header_logoTtl.append(logo_a, headerTtl_a);
 header_langSelector.append(en_a, ja_a);
-header_inner.append(header_logoTtl, header_langSelector);
-header_container.append(header_inner);
+logoTtl_langSelector_wrapper.append(header_logoTtl, header_langSelector);
+header_inner.append(logoTtl_langSelector_wrapper);
 menu_nav.append(menu_ul);
-header.append(header_container, menu_nav);
+header_container.append(header_inner, menu_nav);
+header.append(header_container);
 //header
 
 

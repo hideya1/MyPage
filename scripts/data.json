@@ -305,23 +305,48 @@
     "spThx": [
         {
             "cat": "book",
+            "name": "わにわにシリーズ",
+            "url": "https://www.fukuinkan.co.jp/ninkimono/detail.php?id=17"
+        },
+        {
+            "cat": "book",
             "name": "おこだでませんように",
             "url": "https://www.shogakukan.co.jp/books/09726329"
         },
         {
-            "cat": "entity",
+            "cat": "facility",
             "name": "住吉区 子ども・子育てプラザ",
             "url": "https://www.osaka-kosodate.net/plaza/sumiyoshi/"
         },
         {
-            "cat": "entity",
+            "cat": "facility",
             "name": "修学院児童館",
             "url": "http://kyo-yancha.ne.jp/shugakin/index.html"
         },
         {
-            "cat": "entity",
+            "cat": "facility",
             "name": "ゆいの森あらかわ",
             "url": "https://www.yuinomori.city.arakawa.tokyo.jp/index.html"
+        },
+        {
+            "cat": "facility",
+            "name": "UVA International Center",
+            "url": "https://internationalcenter.virginia.edu/"
+        },
+        {
+            "cat": "group",
+            "name": "マラバリスタ",
+            "url": "http://www.malabaristas.com/"
+        },
+        {
+            "cat": "movie",
+            "name": "ゴジラシリーズ(昭和、平成)",
+            "url": ""
+        },
+        {
+            "cat": "movie",
+            "name": "時をかける少女",
+            "url": "https://web.archive.org/web/20070930195849/http://www.kadokawa.co.jp/tokikake/"
         }
     ]
 }
