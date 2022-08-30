@@ -148,7 +148,7 @@ ol > li > * {
   color: var(--soft);
   font-family: sans-serif;
   padding-right: 1rem;
-  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
   padding-left: 1rem;
 }
 .l_para:last-of-type {
