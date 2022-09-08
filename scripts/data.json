@@ -337,16 +337,6 @@
             "cat": "group",
             "name": "マラバリスタ",
             "url": "http://www.malabaristas.com/"
-        },
-        {
-            "cat": "movie",
-            "name": "ゴジラシリーズ(昭和、平成)",
-            "url": ""
-        },
-        {
-            "cat": "movie",
-            "name": "時をかける少女",
-            "url": "https://web.archive.org/web/20070930195849/http://www.kadokawa.co.jp/tokikake/"
         }
     ]
 }
