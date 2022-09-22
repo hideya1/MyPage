@@ -16,7 +16,11 @@ async function mk_orgnz(){
         div2 = document.createElement("div");
         div1.className = "b_2col_list_1st";
         div2.className = "b_2col_list_2nd";
-        div1.textContent = `${obj.from}${ENDASH}${obj.to}:`;
+        if (obj.to === "") {
+            div1.textContent = obj.from + ":";
+        } else {
+            div1.textContent = `${obj.from}${ENDASH}${obj.to}:`;
+        }
         div2.innerHTML = `<a href="${obj.url[0]}">${obj.name[0]}</a>.`;
         li.append(div1, div2);
         orgnz_frag.append(li);

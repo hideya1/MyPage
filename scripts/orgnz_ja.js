@@ -17,7 +17,11 @@ async function mk_orgnz(){
         div1.className = "b_2col_list_1st";
         div2.className = "b_2col_list_2nd";
         let to = (obj.to === "Present") ? "現在" : obj.to;
-        div1.textContent = `${obj.from}${ENDASH}${to}:`;
+        if (to === "") {
+            div1.textContent = obj.from + ":";
+        } else {
+            div1.textContent = `${obj.from}${ENDASH}${to}:`;
+        }
         div2.innerHTML = `<a href="${obj.url[1]}">${obj.name[1]}</a>.`;
         li.append(div1, div2);
         orgnz_frag.append(li);
