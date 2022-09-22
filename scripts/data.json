@@ -146,6 +146,12 @@
     ],
     "preprints": [
         {
+            "coauthors": ["Kusano, Hiroto", "Okado, Masato"],
+            "title": "Kirillov-Reshetikhin modules and quantum $K$-matrices",
+            "at": "arXiv:2209.10325",
+            "url": "https://arxiv.org/abs/2209.10325"
+        },
+        {
             "coauthors": [],
             "title": "Stability of $\\imath$canonical bases of irreducible finite type of real rank one",
             "at": "arXiv:2207.05919v2",
