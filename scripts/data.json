@@ -87,6 +87,12 @@
     ],
     "papers": [
         {
+            "coauthors": [],
+            "title": "Based modules over the $\\imath$quantum group of type AI",
+            "at": "arXiv:2103.12932, to appear in Math. Z.",
+            "url": "https://arxiv.org/abs/2103.12932"
+        },
+        {
             "coauthors": ["Yamamura, Keita"],
             "title": "Alcove paths and Gelfand-Tsetlin patterns",
             "journal": "Annals of Combinatorics, 25 (2021), no. 3, 645\u2013676",
@@ -167,12 +173,6 @@
             "title": "A new tableau model for irreducible polynomial representations of the orthogonal group",
             "at": "arXiv:2107.00170",
             "url": "https://arxiv.org/abs/2107.00170"
-        },
-        {
-            "coauthors": [],
-            "title": "Based modules over the $\\imath$quantum group of type AI",
-            "at": "arXiv:2103.12932",
-            "url": "https://arxiv.org/abs/2103.12932"
         }
     ],
     "talks": [
