@@ -40,6 +40,6 @@ MENU = {
     "home": {"name": "ホーム", "url": HOME_PATH},
     "papers": {"name": "論文", "url": PAPERS_INDEX_PATH},
     "talks": {"name": "講演", "url": TALKS_INDEX_PATH},
-    "organizations": {"name": "企画", "url": ORGANIZATIONS_INDEX_PATH},
+    "organizations": {"name": "企画・運営", "url": ORGANIZATIONS_INDEX_PATH},
     "funds": {"name": "外部資金", "url": FUNDS_INDEX_PATH},
 }

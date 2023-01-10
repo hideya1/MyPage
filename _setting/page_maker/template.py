@@ -1,6 +1,7 @@
 import os, sys
 sys.path.append(os.path.dirname(__file__))
 from conf import *
+import conf_ja
 from myapp.htmlmanager import *
 from myapp.jsonmanager import JsonManager
 
@@ -13,6 +14,19 @@ class Template(Composite):
                         title="Hideya Watanabe",
                         link=base_link
                     )
+        header.children[0].children[0].set_attr("class", "header_inner flexContainer__spaceBetween")
+        header.children[0].children[0].append_child(
+            Nav(attrs={"class": "langMenu"}, children=[
+                Ul(children=[
+                    Li(children=[
+                        A(attrs={"class": "is_active"}, children=["English"])
+                    ]),
+                    Li(children=[
+                        A(attrs={"href": conf_ja.MENU[active_menu]["url"]}, children=["日本語"])
+                    ])
+                ])
+            ])
+        )
         header.append_child(menu(menu_data=MENU, active_menu=active_menu))
         self.node = Page(
             root = Root(

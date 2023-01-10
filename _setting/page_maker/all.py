@@ -10,6 +10,5 @@ from talks import mk_talks
 mk_funds()
 mk_home()
 mk_organizations()
-mk_profile()
 mk_papers()
 mk_talks()
