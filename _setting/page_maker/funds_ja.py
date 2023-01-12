@@ -11,10 +11,10 @@ def mk_funds():
     url = FUNDS_INDEX_PATH
     base_link = os.path.relpath(HOME_PATH, url)[3:]
 
-    ul = Ul(attrs={"class": "para periodList"}, children=[])
+    ul = Ul(attrs={"class": "para twoColList"}, children=[])
     for fund in FUNDS_DATA:
-        div1 = Div(attrs={"class": "periodList_1st"}, children=[fund["from"], "&ndash;", fund["to"], ":"])
-        div2 = Div(attrs={"class": "periodList_2nd"}, children=[
+        div1 = Div(attrs={"class": "twoColList_1st__period"}, children=[fund["from"], "&ndash;", fund["to"], ":"])
+        div2 = Div(attrs={"class": "twoColList_2nd"}, children=[
             fund["name"][1], ", ",
             fund["category"][1], ", ",
             "課題番号: ", A(attrs={"href": fund["url"][1]}, children=[fund["number"]])

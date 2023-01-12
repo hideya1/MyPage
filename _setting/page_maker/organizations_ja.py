@@ -11,14 +11,14 @@ def mk_organizations():
     url = ORGANIZATIONS_INDEX_PATH
     base_link = os.path.relpath(HOME_PATH, url)[3:]
 
-    ul = Ul(attrs={"class": "para periodList"}, children=[])
+    ul = Ul(attrs={"class": "para twoColList"}, children=[])
     for orgn in ORGANIZATIONS_DATA:
         period = orgn["from"]
         if orgn["to"]:
             period += "&ndash;" + orgn["to"].replace("Present", "現在")
         period += ":"
-        div1 = Div(attrs={"class": "periodList_1st"}, children=[period])
-        div2 = Div(attrs={"class": "periodList_2nd"}, children=[
+        div1 = Div(attrs={"class": "twoColList_1st__period"}, children=[period])
+        div2 = Div(attrs={"class": "twoColList_2nd"}, children=[
             A(attrs={"href": orgn["url"][1]}, children=[orgn["name"][1]])
         ])
         li = Li(children=[div1, div2])

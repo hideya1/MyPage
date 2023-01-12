@@ -30,15 +30,15 @@ def mk_papers():
     url = PAPERS_INDEX_PATH
     base_link = os.path.relpath(HOME_PATH, url)[3:]
 
-    ul = Ul(attrs={"class": "para twoDigitList"}, children=[])
+    ul = Ul(attrs={"class": "para twoColList"}, children=[])
     for i in range(len(PUBLISHED)):
         paper = PUBLISHED[i]
         if paper["url"]:
             journal = A(attrs={"href": paper["url"]}, children=[paper["journal"]])
         else:
             journal = Fragment(children=[paper["journal"]])
-        div1 = Div(attrs={"class": "twoDigitList_1st"}, children=[str(i+1), "."])
-        div2 = Div(attrs={"class": "twoDigitList_2nd"}, children=[
+        div1 = Div(attrs={"class": "twoColList_1st__2digit"}, children=[str(i+1), "."])
+        div2 = Div(attrs={"class": "twoColList_2nd"}, children=[
             format_coauthors(paper["coauthors"]),
             paper["title"],
             ", ",
@@ -52,12 +52,12 @@ def mk_papers():
         ul
     ])
 
-    ul = Ul(attrs={"class": "para twoDigitList"}, children=[])
+    ul = Ul(attrs={"class": "para twoColList"}, children=[])
     for i in range(len(PREPRINTS)):
         paper = PREPRINTS[i]
         arxiv = A(attrs={"href": paper["url"]}, children=[paper["at"]])
-        div1 = Div(attrs={"class": "twoDigitList_1st"}, children=[str(i+1), "."])
-        div2 = Div(attrs={"class": "twoDigitList_2nd"}, children=[
+        div1 = Div(attrs={"class": "twoColList_1st__2digit"}, children=[str(i+1), "."])
+        div2 = Div(attrs={"class": "twoColList_2nd"}, children=[
             format_coauthors(paper["coauthors"]),
             paper["title"],
             ", ",

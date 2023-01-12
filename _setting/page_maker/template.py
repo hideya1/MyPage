@@ -16,13 +16,13 @@ class Template(Composite):
                     )
         header.children[0].children[0].set_attr("class", "header_inner flexContainer__spaceBetween")
         header.children[0].children[0].append_child(
-            Nav(attrs={"class": "langMenu"}, children=[
+            Nav(attrs={"class": "menu"}, children=[
                 Ul(children=[
                     Li(children=[
-                        A(attrs={"class": "is_active"}, children=["English"])
+                        A(attrs={"class": "is_active noBorder"}, children=["English"])
                     ]),
                     Li(children=[
-                        A(attrs={"href": conf_ja.MENU[active_menu]["url"]}, children=["日本語"])
+                        A(attrs={"class": "noBorder", "href": conf_ja.MENU[active_menu]["url"]}, children=["日本語"])
                     ])
                 ])
             ])

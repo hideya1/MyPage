@@ -6,6 +6,7 @@ from template import Template
 from myapp.textfilemanager import TextFileManager
 from myapp.htmlmanager import *
 
+
 def mk_home():
     url = HOME_PATH
 
@@ -27,10 +28,10 @@ def mk_home():
         keywords
     ])
 
-    ul = Ul(attrs={"class": "para eduList"}, children=[])
+    ul = Ul(attrs={"class": "para twoColList"}, children=[])
     for edu in EDUCATION:
-        div1 = Div(attrs={"class": "eduList_1st"}, children=[edu["type"][0] + ":"])
-        div2 = Div(attrs={"class": "eduList_2nd"}, children=[
+        div1 = Div(attrs={"class": "twoColList_1st__9"}, children=[edu["type"][0] + ":"])
+        div2 = Div(attrs={"class": "twoColList_2nd"}, children=[
             A(attrs={"href": edu["url"][0]}, children=[edu["univ"][0]]),
             ", ",
             edu["date"],
@@ -46,10 +47,10 @@ def mk_home():
         ul
     ])
 
-    ul = Ul(attrs={"class": "para periodList"}, children=[])
+    ul = Ul(attrs={"class": "para twoColList"}, children=[])
     for his in HISTORY:
-        div1 = Div(attrs={"class": "periodList_1st"}, children=[his["from"], "&ndash;", his["to"], ":"])
-        div2 = Div(attrs={"class": "periodList_2nd"}, children=[
+        div1 = Div(attrs={"class": "twoColList_1st__period"}, children=[his["from"], "&ndash;", his["to"], ":"])
+        div2 = Div(attrs={"class": "twoColList_2nd"}, children=[
             A(attrs={"href": his["url"][0]}, children=[his["at"][0]]),
             ", ",
             his["as"][0]

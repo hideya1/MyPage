@@ -27,10 +27,10 @@ def mk_home():
         keywords
     ])
 
-    ul = Ul(attrs={"class": "para eduList"}, children=[])
+    ul = Ul(attrs={"class": "para twoColList"}, children=[])
     for edu in EDUCATION:
-        div1 = Div(attrs={"class": "eduList_1st__ja"}, children=[edu["type"][1] + ":"])
-        div2 = Div(attrs={"class": "eduList_2nd"}, children=[
+        div1 = Div(attrs={"class": "twoColList_1st__6"}, children=[edu["type"][1] + ":"])
+        div2 = Div(attrs={"class": "twoColList_2nd"}, children=[
             A(attrs={"href": edu["url"][1]}, children=[edu["univ"][1]]),
             ", ",
             edu["date"],
@@ -46,10 +46,10 @@ def mk_home():
         ul
     ])
 
-    ul = Ul(attrs={"class": "para periodList"}, children=[])
+    ul = Ul(attrs={"class": "para twoColList"}, children=[])
     for his in HISTORY:
-        div1 = Div(attrs={"class": "periodList_1st"}, children=[his["from"], "&ndash;", his["to"].replace("Present", "現在"), ":"])
-        div2 = Div(attrs={"class": "periodList_2nd"}, children=[
+        div1 = Div(attrs={"class": "twoColList_1st__period"}, children=[his["from"], "&ndash;", his["to"].replace("Present", "現在"), ":"])
+        div2 = Div(attrs={"class": "twoColList_2nd"}, children=[
             A(attrs={"href": his["url"][1]}, children=[his["at"][1]]),
             ", ",
             his["as"][1]

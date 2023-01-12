@@ -11,15 +11,15 @@ def mk_talks():
     url = TALKS_INDEX_PATH
     base_link = os.path.relpath(HOME_PATH, url)[3:]
 
-    ul = Ul(attrs={"class": "para twoDigitList"}, children=[])
+    ul = Ul(attrs={"class": "para twoColList"}, children=[])
     for i in range(len(TALKS_DATA)):
         talk = TALKS_DATA[i]
         try:
             at = talk["at"][1]
         except:
             at = talk["at"][0]
-        div1 = Div(attrs={"class": "twoDigitList_1st"}, children=[str(i+1), "."])
-        div2 = Div(attrs={"class": "twoDigitList_2nd"}, children=[
+        div1 = Div(attrs={"class": "twoColList_1st__2digit"}, children=[str(i+1), "."])
+        div2 = Div(attrs={"class": "twoColList_2nd"}, children=[
             talk["title"],
             ", ",
             at,

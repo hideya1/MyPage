@@ -446,14 +446,22 @@ ul {
   margin-bottom: 0.5rem !important;
 }
 
-.breadComb {
+.noBorder {
+  border: none !important;
+}
+
+.breadcrumbs ul {
   display: flex;
   margin-left: 0;
   margin-bottom: 1rem;
 }
-.breadComb li {
+.breadcrumbs ul li {
   list-style: "> ";
   margin-left: 1.5rem;
+}
+.breadcrumbs ul li:first-child {
+  list-style: none;
+  margin-left: 0;
 }
 
 .flexContainer {
@@ -486,6 +494,7 @@ ul {
 }
 .art_ttl {
   font-size: 1.5rem;
+  font-weight: bolder;
   color: var(--mainColor);
   border-left: 0.2rem solid var(--mainColor);
   padding-left: 0.2rem;
@@ -588,7 +597,7 @@ ul {
   padding-left: 30px;
   border-bottom: 3px solid var(--pale);
   text-decoration: none;
-  color: var(--textColor_weak);
+  color: var(--pale);
   transition: 0.25s;
 }
 .menu a:hover, .menu a:focus {
@@ -602,37 +611,6 @@ ul {
   pointer-events: none;
 }
 
-.langMenu {
-  display: block;
-}
-.langMenu ul {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  list-style-type: none;
-}
-.langMenu ul li {
-  display: initial;
-  padding-bottom: 0;
-}
-.langMenu a {
-  display: inline-block;
-  padding-right: 15px;
-  padding-bottom: 0px;
-  padding-left: 15px;
-  text-decoration: none;
-  color: var(--textColor_weak);
-}
-.langMenu a:hover, .menu a:focus {
-  color: var(--mainColor);
-  opacity: 0.75;
-}
-.langMenu a.is_active {
-  color: var(--mainColor);
-  pointer-events: none;
-}
-
 .twoColList li {
   list-style-type: none;
   display: flex;
@@ -640,43 +618,19 @@ ul {
 .twoColList_1st {
   flex: 0 0 5rem;
 }
-.twoColList_2nd {
-  flex: 1 1 auto;
-}
-
-.eduList li {
-  list-style-type: none;
-  display: flex;
-}
-.eduList_1st {
-  flex: 0 0 9rem;
-}
-.eduList_1st__ja {
-  flex: 0 0 6rem;
-}
-.eduList_2nd {
-  flex: 1 1 auto;
-}
-
-.periodList li {
-  list-style-type: none;
-  display: flex;
-}
-.periodList_1st {
-  flex: 0 0 10rem;
-}
-.periodList_2nd {
-  flex: 1 1 auto;
-}
-
-.twoDigitList li {
-  list-style-type: none;
-  display: flex;
-}
-.twoDigitList_1st {
+.twoColList_1st__2digit {
   flex: 0 0 2rem;
 }
-.twoDigitList_2nd {
+.twoColList_1st__6 {
+  flex: 0 0 6rem;
+}
+.twoColList_1st__9 {
+  flex: 0 0 9rem;
+}
+.twoColList_1st__period {
+  flex: 0 0 10rem;
+}
+.twoColList_2nd {
   flex: 1 1 auto;
 }
 /*# sourceMappingURL=my_style.css.map */
