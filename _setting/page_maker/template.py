@@ -8,7 +8,7 @@ from myapp.jsonmanager import JsonManager
 
 class Template(Composite):
     def __init__(self, tab_title, base_link, active_menu, art) -> None:
-        self.head = head_template(tab_title, base_link, css_link=MY_STYLE_PATH)
+        self.head = head_template(tab_title, base_link, css_links=MY_STYLE_PATH)
         header = header_logo_title(
                         logo_path=LOGO_IMG_PATH,
                         title="Hideya Watanabe",

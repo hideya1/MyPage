@@ -2,8 +2,8 @@
     "published": [
         {
             "coauthors": [],
-            "title": "Stability of $\\imath$canonical bases of irreducible finite type of real rank one",
-            "journal": "to appear in Representation Theory",
+            "title": "Crystal bases of modified $\\imath$quantum groups of certain quasi-split types",
+            "journal": "to appear in Algebras and Representation Theory",
             "url": ""
         },
         {
@@ -11,6 +11,12 @@
             "title": "Based modules over the $\\imath$quantum group of type AI",
             "journal": "to appear in Math. Z.",
             "url": ""
+        },
+        {
+            "coauthors": [],
+            "title": "Stability of $\\imath$canonical bases of irreducible finite type of real rank one",
+            "journal": "Represent. Theory 27 (2023), 1\u201329",
+            "url": "https://www.ams.org/journals/ert/2023-27-01/S1088-4165-2023-00639-5/"
         },
         {
             "coauthors": ["Yamamura, Keita"],
@@ -75,12 +81,6 @@
             "title": "Kirillov-Reshetikhin modules and quantum $K$-matrices",
             "at": "arXiv:2209.10325",
             "url": "https://arxiv.org/abs/2209.10325"
-        },
-        {
-            "coauthors": [],
-            "title": "Crystal bases of modified $\\imath$quantum groups of certain quasi-split types",
-            "at": "arXiv:2110.07177",
-            "url": "https://arxiv.org/abs/2110.07177"
         },
         {
             "coauthors": [],
