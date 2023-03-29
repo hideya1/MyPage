@@ -430,6 +430,7 @@ img {
 }
 
 a {
+  display: inline;
   color: var(--textColor_weak);
   -webkit-text-decoration-color: var(--textColor_weak);
           text-decoration-color: var(--textColor_weak);
@@ -448,6 +449,10 @@ ul {
 
 .noBorder {
   border: none !important;
+}
+
+.jstfyCont__Start {
+  justify-content: flex-start !important;
 }
 
 .breadcrumbs ul {
@@ -597,7 +602,7 @@ ul {
   padding-left: 30px;
   border-bottom: 3px solid var(--pale);
   text-decoration: none;
-  color: var(--pale);
+  color: var(--lightGrayish);
   transition: 0.25s;
 }
 .menu a:hover, .menu a:focus {
@@ -609,6 +614,35 @@ ul {
   border-bottom-color: var(--mainColor);
   color: var(--mainColor);
   pointer-events: none;
+}
+
+.nav {
+  display: block;
+}
+.nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style-type: none;
+}
+.nav ul li {
+  display: initial;
+  padding-bottom: 0;
+}
+.nav ul li::before {
+  content: none;
+}
+.nav a {
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 10px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+.nav a:hover, .nav a:focus {
+  border-bottom-color: var(--mainColor);
+  color: var(--mainColor);
+  opacity: 0.75;
 }
 
 .twoColList li {
@@ -623,6 +657,9 @@ ul {
 }
 .twoColList_1st__6 {
   flex: 0 0 6rem;
+}
+.twoColList_1st__8 {
+  flex: 0 0 8rem;
 }
 .twoColList_1st__9 {
   flex: 0 0 9rem;
