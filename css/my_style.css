@@ -667,6 +667,18 @@ ul {
 .twoColList_1st__period {
   flex: 0 0 10rem;
 }
+.twoColList_1st__12 {
+  flex: 0 0 12rem;
+}
+.twoColList_1st__15 {
+  flex: 0 0 15rem;
+}
+.twoColList_1st__16 {
+  flex: 0 0 16rem;
+}
+.twoColList_1st__17 {
+  flex: 0 0 17rem;
+}
 .twoColList_2nd {
   flex: 1 1 auto;
 }
