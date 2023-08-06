@@ -373,26 +373,6 @@ th {
   font-weight: bold;
 }
 
-:root {
-  --bgColor: #efefef;
-  --textColor: #333;
-  --textColor_weak: #777;
-  --mainColor: #005ba5;
-  --bright: #2981c0;
-  --strong: #005b9b;
-  --deep: #004280;
-  --lightPlus: #6c9ac5;
-  --light: #83a7c8;
-  --soft: #5d7ea0;
-  --dull: #34597d;
-  --dark: #123452;
-  --palePlus: #afc0d1;
-  --pale: #c2ccd5;
-  --lightGrayish: #9ba5af;
-  --grayish: #4c5765;
-  --darkGrayish: #222933;
-}
-
 html {
   font-size: 20px;
   scroll-behavior: smooth;
@@ -412,7 +392,7 @@ body *,
 
 body {
   font-family: serif;
-  line-height: 160%;
+  line-height: 180%;
   background-color: var(--bgColor);
   color: var(--textColor);
 }
@@ -431,9 +411,10 @@ img {
 
 a {
   display: inline;
-  color: var(--textColor_weak);
-  -webkit-text-decoration-color: var(--textColor_weak);
-          text-decoration-color: var(--textColor_weak);
+  color: var(--textColor);
+  text-decoration: underline;
+  -webkit-text-decoration-color: var(--mainColor);
+          text-decoration-color: var(--mainColor);
   text-decoration-thickness: 0.05rem;
 }
 
@@ -447,39 +428,15 @@ ul {
   margin-bottom: 0.5rem !important;
 }
 
-.noBorder {
-  border: none !important;
-}
-
-.jstfyCont__Start {
-  justify-content: flex-start !important;
-}
-
-.breadcrumbs ul {
-  display: flex;
-  margin-left: 0;
-  margin-bottom: 1rem;
-}
-.breadcrumbs ul li {
-  list-style: "> ";
-  margin-left: 1.5rem;
-}
-.breadcrumbs ul li:first-child {
-  list-style: none;
-  margin-left: 0;
-}
-
-.flexContainer {
-  display: flex;
-}
-.flexContainer__spaceBetween {
-  display: flex;
-  justify-content: space-between;
-}
-
 .header {
+  background-color: var(--mainColor);
+  color: var(--bgColor);
   padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   border-bottom: 0.05rem solid var(--mainColor);
+}
+.header * {
+  color: var(--bgColor);
 }
 .header_inner {
   max-width: 1200px;
@@ -491,11 +448,19 @@ ul {
 }
 .header_ttl {
   font-size: 2rem;
-  color: var(--lightPlus);
+  color: var(--bgColor);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
 }
 
 .art {
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .art_ttl {
   font-size: 1.5rem;
@@ -505,41 +470,58 @@ ul {
   padding-left: 0.2rem;
   margin-left: 0.2rem;
 }
-
-.sect {
-  padding-top: 1rem;
+.art_cont {
   padding-right: 1rem;
   padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sect {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 .sect_ttl {
   font-size: 1.3rem;
-  color: var(--strong);
-  border-left: 0.1rem solid var(--strong);
+  font-weight: bolder;
+  color: var(--mainColor);
+  border-left: 0.1rem solid var(--mainColor);
   padding-left: 0.1rem;
   margin-left: 0.1rem;
 }
-
-.subSect {
-  padding-top: 0.5rem;
+.sect_cont {
   padding-right: 1rem;
   padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.subSect {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 .subSect_ttl {
   font-size: 1.2rem;
-  color: var(--bright);
+  font-weight: bolder;
+  color: var(--mainColor);
   margin-left: 0.1rem;
+}
+.subSect_cont {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .para {
-  color: var(--soft);
+  color: var(--textColor);
   font-family: sans-serif;
   font-size: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.25rem;
-  padding-left: 1rem;
-}
-.para:last-of-type {
-  padding-bottom: 0;
 }
 .para > ul {
   padding-right: 1rem;
@@ -547,6 +529,8 @@ ul {
 }
 
 .footer {
+  background-color: var(--mainColor);
+  color: var(--bgColor);
   margin-bottom: 2rem;
   border-top: 0.05rem solid var(--mainColor);
 }
@@ -558,91 +542,41 @@ ul {
   font-family: sans-serif;
 }
 
-.logoTtl {
+.tabNav {
+  margin-top: 1rem;
+}
+.tabNav_inner {
   display: flex;
-  align-items: flex-end;
-  height: 3em;
-}
-.logoTtl_logo {
-  height: 3em;
-  margin-right: 1em;
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-.logoTtl_ttl {
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-}
-.logoTtl a {
-  text-decoration: none;
-}
-
-.menu {
-  display: block;
-}
-.menu ul {
-  display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  list-style-type: none;
+  margin-bottom: -1.8rem;
 }
-.menu ul li {
-  display: initial;
-  padding-bottom: 0;
-}
-.menu ul li::before {
-  content: none;
-}
-.menu a {
+.tabNav_link {
   display: inline-block;
-  padding-right: 30px;
-  padding-bottom: 5px;
-  padding-left: 30px;
-  border-bottom: 3px solid var(--pale);
+  padding-right: 1rem;
+  padding-left: 1rem;
   text-decoration: none;
-  color: var(--lightGrayish);
-  transition: 0.25s;
+  opacity: 0.6;
+  transition: 0.5s;
 }
-.menu a:hover, .menu a:focus {
-  border-bottom-color: var(--mainColor);
-  color: var(--mainColor);
-  opacity: 0.75;
+.tabNav_link:focus, .tabNav_link:hover {
+  opacity: 1;
 }
-.menu a.is_active {
-  border-bottom-color: var(--mainColor);
-  color: var(--mainColor);
-  pointer-events: none;
+.tabNav_link.active {
+  opacity: 1;
 }
 
-.nav {
-  display: block;
-}
-.nav ul {
+.cont_flex {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  list-style-type: none;
 }
-.nav ul li {
-  display: initial;
-  padding-bottom: 0;
+.cont_flex__spaceBetween {
+  display: flex;
+  justify-content: space-between;
 }
-.nav ul li::before {
-  content: none;
-}
-.nav a {
-  display: inline-block;
-  padding-right: 10px;
-  padding-left: 10px;
-  text-decoration: none;
-  transition: 0.25s;
-}
-.nav a:hover, .nav a:focus {
-  border-bottom-color: var(--mainColor);
-  color: var(--mainColor);
-  opacity: 0.75;
+.cont_flex__center {
+  display: flex;
+  justify-content: center;
 }
 
 .twoColList li {
@@ -654,6 +588,9 @@ ul {
 }
 .twoColList_1st__2digit {
   flex: 0 0 2rem;
+}
+.twoColList_1st__5 {
+  flex: 0 0 5rem;
 }
 .twoColList_1st__6 {
   flex: 0 0 6rem;
@@ -667,19 +604,14 @@ ul {
 .twoColList_1st__period {
   flex: 0 0 10rem;
 }
-.twoColList_1st__12 {
-  flex: 0 0 12rem;
-}
-.twoColList_1st__15 {
-  flex: 0 0 15rem;
-}
-.twoColList_1st__16 {
-  flex: 0 0 16rem;
-}
-.twoColList_1st__17 {
-  flex: 0 0 17rem;
-}
 .twoColList_2nd {
   flex: 1 1 auto;
+}
+
+:root {
+  --bgColor: #eee;
+  --textColor: #0e51a2;
+  --textColor_weak: #777;
+  --mainColor: #1f84d7;
 }
 /*# sourceMappingURL=my_style.css.map */
