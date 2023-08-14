@@ -1,16 +1,13 @@
-@use "../../../../css2/reset/destyle.css";
+@use "../../../../../../css/reset/destyle.css";
 
-
-
-@use "../../../../css2/layout/layout";
-@use "../../../../css2/nav/tabNav";
-@use "../../../../css2/container/flex";
-@use "../../../../css2/list/two_column_list";
-
+@use "../../../../../../css/layout/layout";
+@use "../../../../../../css/nav/tabNav";
+@use "../../../../../../css/container/flex";
+@use "../../../../../../css/list/two_column_list";
 
 :root {
     --bgColor: #eee;
-    --textColor: #0e51a2;
+    --textColor: #333;
     --textColor_weak: #777;
     --mainColor: #1f84d7;
     }

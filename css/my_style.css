@@ -529,17 +529,22 @@ ul {
 }
 
 .footer {
-  background-color: var(--mainColor);
-  color: var(--bgColor);
-  margin-bottom: 2rem;
+  background-color: var(--bgColor);
+  color: var(--textColor);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   border-top: 0.05rem solid var(--mainColor);
 }
+.footer * {
+  color: var(--textColor);
+}
 .footer_inner {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   padding-right: 1rem;
   padding-left: 1rem;
   text-align: center;
-  font-size: smaller;
-  font-family: sans-serif;
 }
 
 .tabNav {
@@ -610,7 +615,7 @@ ul {
 
 :root {
   --bgColor: #eee;
-  --textColor: #0e51a2;
+  --textColor: #333;
   --textColor_weak: #777;
   --mainColor: #1f84d7;
 }
