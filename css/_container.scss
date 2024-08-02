@@ -1,0 +1,11 @@
+.cont_flex {
+    display: flex;
+    &__spaceBetween {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__center {
+        display: flex;
+        justify-content: center;
+    }
+}

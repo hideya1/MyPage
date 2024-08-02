@@ -1,0 +1,25 @@
+.tabNav {
+    margin-top: 1rem;
+    &_inner {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: -1.8rem;
+    }
+    &_link {
+        display: inline-block;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        text-decoration: none;
+        opacity: 0.6;
+        transition: .5s;
+        &:focus, &:hover {
+            opacity: 1;
+        }
+        &.active {
+            opacity: 1;
+        }
+    }
+}
+

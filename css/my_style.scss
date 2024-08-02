@@ -1,9 +1,8 @@
-@use "../../../../../../css/reset/destyle.css";
-
-@use "../../../../../../css/layout/layout";
-@use "../../../../../../css/nav/tabNav";
-@use "../../../../../../css/container/flex";
-@use "../../../../../../css/list/two_column_list";
+@use "destyle.css";
+@use "layout";
+@use "container";
+@use "list";
+@use "nav";
 
 :root {
     --bgColor: #eee;
@@ -11,3 +10,4 @@
     --textColor_weak: #777;
     --mainColor: #1f84d7;
     }
+    

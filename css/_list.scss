@@ -1,0 +1,36 @@
+.twoColList {
+    & li {
+        list-style-type: none;
+        display: flex;
+    }
+    &_1st {
+        flex: 0 0 5rem;
+
+        &__2digit {
+            flex: 0 0 2rem;
+        }
+
+        &__5 {
+            flex: 0 0 5rem;
+        }
+
+        &__6 {
+            flex: 0 0 6rem;
+        }
+
+        &__8 {
+            flex: 0 0 8rem;
+        }
+
+        &__9 {
+            flex: 0 0 9rem;
+        }
+
+        &__period {
+            flex: 0 0 10rem;
+        }
+    }
+    &_2nd {
+        flex: 1 1 auto;
+    }
+}
