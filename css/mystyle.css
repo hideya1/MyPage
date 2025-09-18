@@ -1,4 +1,5 @@
-/*! destyle.css v4.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css */
+@charset "UTF-8";
+/*! destyle.css v4.0.1 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
 *,
@@ -7,6 +8,7 @@
   box-sizing: border-box;
   border-style: solid;
   border-width: 0;
+  min-width: 0;
 }
 
 /* Document */
@@ -401,6 +403,7 @@ main {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  word-spacing: 3pt;
 }
 
 img {
@@ -419,8 +422,41 @@ a {
 }
 
 ul {
-  margin-left: 1rem;
+  margin-left: 2rem;
+}
+ul.disc {
   list-style: disc;
+}
+
+ol {
+  margin-left: 2rem;
+}
+ol.decimal {
+  list-style: decimal;
+}
+ol.alpha {
+  list-style: lower-alpha;
+}
+
+dl {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+dl.colon dt::after {
+  content: ":";
+}
+dl div {
+  display: flex;
+}
+dl dt {
+  flex: 0 0 auto;
+  max-width: 30%;
+}
+dl dd {
+  margin-left: 1rem;
+  flex: 1 0 auto;
+  max-width: 70%;
 }
 
 .MathJax_Display {
@@ -523,9 +559,6 @@ ul {
   font-family: sans-serif;
   font-size: 1rem;
 }
-.para > ul {
-  padding-left: 1rem;
-}
 
 .footer {
   background-color: var(--bgColor);
@@ -544,18 +577,6 @@ ul {
   padding-right: 1rem;
   padding-left: 1rem;
   text-align: center;
-}
-
-.cont_flex {
-  display: flex;
-}
-.cont_flex__spaceBetween {
-  display: flex;
-  justify-content: space-between;
-}
-.cont_flex__center {
-  display: flex;
-  justify-content: center;
 }
 
 .twoColList li {
@@ -612,10 +633,20 @@ ul {
   opacity: 1;
 }
 
+.breadcrumbs {
+  display: flex;
+  list-style: none;
+  margin-left: 1rem;
+}
+.breadcrumbs li:not(:last-of-type)::after {
+  content: "›";
+  margin: 0.5rem; /* 記号の左右の余白 */
+}
+
 :root {
   --bgColor: #eee;
   --textColor: #333;
   --textColor_weak: #777;
   --mainColor: #1f84d7;
 }
-/*# sourceMappingURL=my_style.css.map */
+/*# sourceMappingURL=mystyle.css.map */

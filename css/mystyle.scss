@@ -1,6 +1,5 @@
 @use "destyle.css";
 @use "layout";
-@use "container";
 @use "list";
 @use "nav";
 
@@ -9,5 +8,4 @@
     --textColor: #333;
     --textColor_weak: #777;
     --mainColor: #1f84d7;
-    }
-    
+}

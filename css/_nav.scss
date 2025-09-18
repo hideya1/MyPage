@@ -23,3 +23,12 @@
     }
 }
 
+.breadcrumbs {
+    display: flex;
+    list-style: none;
+    & li:not(:last-of-type)::after {
+        content: "›";
+        margin: 0.5rem; /* 記号の左右の余白 */
+    }
+    margin-left: 1rem;
+}

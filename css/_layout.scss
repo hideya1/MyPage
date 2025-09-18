@@ -3,6 +3,7 @@ html {
     scroll-behavior: smooth;
 }
 
+
 @media (max-width: 768px) {
     html {
         font-size: 16px;
@@ -17,6 +18,7 @@ body *,
     box-sizing: border-box;
 }
 
+
 body {
     font-family: serif;
     line-height: 180%;
@@ -29,6 +31,7 @@ main {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    word-spacing: 3pt;
 }
 
 
@@ -49,8 +52,43 @@ a {
 
 
 ul {
+    margin-left: 2rem;
+    &.disc {
+        list-style: disc;
+    }
+}
+
+
+ol {
+    margin-left: 2rem;
+    &.decimal {
+        list-style: decimal;
+    }
+    &.alpha {
+        list-style: lower-alpha;
+    }
+}
+
+
+dl {
     margin-left: 1rem;
-    list-style: disc;
+    display: flex;
+    flex-direction: column;
+    &.colon dt::after {
+        content: ":";
+    }
+    div {
+        display: flex;
+    }
+    dt {
+        flex: 0 0 auto;
+        max-width: 30%;
+    }
+    dd {
+        margin-left: 1rem;
+        flex: 1 0 auto;
+        max-width: 70%;
+    }
 }
 
 
@@ -159,9 +197,6 @@ ul {
     color: var(--textColor);
     font-family: sans-serif;
     font-size: 1rem;
-    & > ul {
-        padding-left: 1rem;
-    }
 }
 
 
